@@ -246,11 +246,11 @@ function macrosHTML(macros) {
   </span>`;
 }
 
-function mealCardHTML(recipe, slotLabel) {
-  return `<button class="meal-card" data-recipe-id="${recipe.id}">
+function mealCardHTML(recipe, slotLabel, slotKey) {
+  return `<button class="meal-card" data-meal="${slotKey}" data-recipe-id="${recipe.id}">
     <span class="meal-stripe"></span>
     <span class="meal-body">
-      <span class="meal-slot">${slotLabel}</span>
+      <span class="meal-slot"><span class="meal-dot"></span>${slotLabel}</span>
       <span class="meal-name">${esc(recipe.nom)}</span>
       ${macrosHTML(recipe.macros)}
     </span>
@@ -297,7 +297,7 @@ function renderToday() {
     if (!id) return freeCardHTML(slot);
     const r = getRecipe(id);
     if (!r) return '';
-    return mealCardHTML(r, SLOT_LABELS[slot]);
+    return mealCardHTML(r, SLOT_LABELS[slot], slot);
   }).join('');
 
   const sourceHTML = citation.source
@@ -349,8 +349,8 @@ function renderSemaine() {
       }
       const r = getRecipe(id);
       if (!r) return '';
-      return `<button class="day-row" data-recipe-id="${r.id}">
-        <span class="row-slot">${SLOT_LABELS[slot]}</span>
+      return `<button class="day-row" data-meal="${slot}" data-recipe-id="${r.id}">
+        <span class="row-slot"><span class="row-dot"></span>${SLOT_LABELS[slot]}</span>
         <span class="row-name">${esc(r.nom)}</span>
         <span class="row-chev">${icon('chevron')}</span>
       </button>`;
@@ -395,7 +395,7 @@ function renderRecettes() {
       if (!r) return '';
       const total = r.prep_min + r.cuisson_min;
       return `<button class="recipe-row" data-recipe-id="${r.id}">
-        <span class="recipe-row-tag">${JOUR_ABBR[jour.jour] || ''} ${SLOT_SHORT[slot] || slot}</span>
+        <span class="recipe-row-tag" data-meal="${slot}">${JOUR_ABBR[jour.jour] || ''} ${SLOT_SHORT[slot] || slot}</span>
         <span class="recipe-row-main">
           <span class="recipe-row-name">${esc(r.nom)}</span>
           <span class="recipe-row-meta">

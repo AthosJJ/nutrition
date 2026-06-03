@@ -243,11 +243,25 @@ button {
   box-shadow: var(--shadow-raised);
 }
 
+/* Couleurs par type de repas (Direction Pastel) */
+[data-meal="petit_dejeuner"] { --meal-dot: #e0a878; --meal-soft: #fbeede; --meal-ink: #9a6a3c; }
+[data-meal="collation"]      { --meal-dot: #b6a7d6; --meal-soft: #efeaf8; --meal-ink: #6f5f97; }
+[data-meal="dejeuner"]       { --meal-dot: #8fae90; --meal-soft: #e8f0e8; --meal-ink: #4f6e53; }
+[data-meal="diner"]          { --meal-dot: #90b2c6; --meal-soft: #e6eff4; --meal-ink: #476074; }
+
 .meal-stripe {
   flex: none;
   width: 6px;
   align-self: stretch;
-  background: var(--accent);
+  background: var(--meal-dot, var(--accent));
+}
+
+.meal-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--meal-dot, var(--text-faint));
 }
 
 .meal-body {
@@ -260,11 +274,14 @@ button {
 }
 
 .meal-slot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 11.5px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--text-muted);
+  color: var(--meal-ink, var(--text-muted));
 }
 
 .meal-name {
@@ -521,12 +538,22 @@ button {
 
 .row-slot {
   flex: none;
-  width: 96px;
+  width: 112px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  white-space: nowrap;
+  color: var(--meal-ink, var(--text-muted));
+}
+
+.row-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--meal-dot, var(--text-faint));
 }
 
 .row-name {
@@ -599,8 +626,8 @@ button {
   text-transform: lowercase;
   letter-spacing: 0.2px;
   white-space: nowrap;
-  background: var(--surface-2);
-  color: var(--text-muted);
+  background: var(--meal-soft, var(--surface-2));
+  color: var(--meal-ink, var(--text-muted));
 }
 
 .recipe-row-main {
@@ -984,8 +1011,13 @@ button {
 .course-section { border-color: transparent; }
 
 .total-card,
-.week-banner,
-.callout {
+.week-banner {
   background: var(--surface-2);
+  border-color: transparent;
+}
+
+/* Callouts (substitution halal, astuce batch) sur fond sauge clair */
+.callout {
+  background: var(--accent-soft);
   border-color: transparent;
 }
