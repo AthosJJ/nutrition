@@ -1,0 +1,468 @@
+{
+  "version": 1,
+  "label_semaine": "Semaine du 8 juin 2026",
+  "personnes": 1,
+  "batch_cooking": true,
+  "petit_dej_collations_inclus": true,
+  "equilibre_semaine": "Semaine équilibrée : 3 repas de poisson, viande blanche privilégiée, féculents complets et légumes verts à chaque repas.",
+  "citations": [
+    { "texte": "ici citation", "source": "" }
+  ],
+  "jours": [
+    {
+      "jour": "dimanche",
+      "date_affichee": "8 juin",
+      "petit_dejeuner": null,
+      "collations": [],
+      "dejeuner": null,
+      "diner": "r1"
+    },
+    {
+      "jour": "lundi",
+      "date_affichee": "9 juin",
+      "petit_dejeuner": "pd1",
+      "collations": ["c1"],
+      "dejeuner": "r2",
+      "diner": "r3"
+    },
+    {
+      "jour": "mardi",
+      "date_affichee": "10 juin",
+      "petit_dejeuner": null,
+      "collations": [],
+      "dejeuner": "r4",
+      "diner": "r5"
+    },
+    {
+      "jour": "mercredi",
+      "date_affichee": "11 juin",
+      "petit_dejeuner": "pd2",
+      "collations": ["c2"],
+      "dejeuner": "r6",
+      "diner": "r7"
+    },
+    {
+      "jour": "jeudi",
+      "date_affichee": "12 juin",
+      "petit_dejeuner": null,
+      "collations": [],
+      "dejeuner": "r8",
+      "diner": "r9"
+    },
+    {
+      "jour": "vendredi",
+      "date_affichee": "13 juin",
+      "petit_dejeuner": null,
+      "collations": [],
+      "dejeuner": "r10",
+      "diner": "r11"
+    },
+    {
+      "jour": "samedi",
+      "date_affichee": "14 juin",
+      "petit_dejeuner": null,
+      "collations": [],
+      "dejeuner": "r12",
+      "diner": null
+    }
+  ],
+  "recettes": [
+    {
+      "id": "r1",
+      "nom": "Poulet rôti au citron & légumes racines",
+      "portions": 1,
+      "prep_min": 15,
+      "cuisson_min": 45,
+      "ingredients": [
+        "2 hauts de cuisse de poulet (avec peau)",
+        "1 citron",
+        "2 carottes",
+        "1 panais",
+        "2 pommes de terre",
+        "2 gousses d'ail",
+        "2 c. à s. d'huile d'olive",
+        "thym, sel, poivre"
+      ],
+      "etapes": [
+        "Préchauffer le four à 200 °C.",
+        "Tailler les légumes en gros morceaux, les disposer dans un plat.",
+        "Déposer le poulet, arroser d'huile, ajouter citron en quartiers, ail et thym.",
+        "Enfourner 45 min en arrosant à mi-cuisson."
+      ],
+      "macros": { "kcal": 560, "P": 48, "G": 34, "L": 22 },
+      "substitution_halal": "Poulet certifié halal — disponible en boucherie (voir liste de courses).",
+      "astuce_batch": "Cuire 2 hauts de cuisse en plus : ils serviront au wrap de mardi midi."
+    },
+    {
+      "id": "r2",
+      "nom": "Salade de lentilles, feta & œuf mollet",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 20,
+      "ingredients": [
+        "120 g de lentilles vertes cuites",
+        "1 œuf",
+        "40 g de feta",
+        "1/2 concombre",
+        "1 c. à s. d'huile d'olive",
+        "1 c. à c. de moutarde",
+        "persil, citron"
+      ],
+      "etapes": [
+        "Cuire l'œuf 6 min puis le rafraîchir et l'écaler.",
+        "Mélanger lentilles, concombre en dés et feta émiettée.",
+        "Assaisonner (huile, moutarde, citron), poser l'œuf coupé en deux."
+      ],
+      "macros": { "kcal": 470, "P": 26, "G": 44, "L": 20 },
+      "substitution_halal": "",
+      "astuce_batch": "Lentilles cuites en grande quantité dimanche : se conservent 4 jours."
+    },
+    {
+      "id": "r3",
+      "nom": "Saumon poêlé, riz basmati & brocoli",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 20,
+      "ingredients": [
+        "1 pavé de saumon",
+        "70 g de riz basmati (cru)",
+        "150 g de brocoli",
+        "1 c. à s. d'huile d'olive",
+        "1/2 citron",
+        "sel, poivre"
+      ],
+      "etapes": [
+        "Cuire le riz selon le paquet.",
+        "Vapeur du brocoli 6–8 min.",
+        "Poêler le saumon 3–4 min par face, finir au citron."
+      ],
+      "macros": { "kcal": 590, "P": 40, "G": 48, "L": 24 },
+      "substitution_halal": "",
+      "astuce_batch": "Doubler le riz : base du buddha bowl de mercredi midi."
+    },
+    {
+      "id": "r4",
+      "nom": "Wrap de poulet, avocat & crudités",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 0,
+      "ingredients": [
+        "1 galette de blé complet",
+        "100 g de poulet rôti (reste de dimanche)",
+        "1/2 avocat",
+        "1 tomate",
+        "1 poignée de salade",
+        "1 c. à s. de yaourt + citron"
+      ],
+      "etapes": [
+        "Effilocher le poulet.",
+        "Tartiner la galette de yaourt citronné.",
+        "Garnir poulet, avocat, tomate, salade ; rouler serré."
+      ],
+      "macros": { "kcal": 520, "P": 34, "G": 40, "L": 24 },
+      "substitution_halal": "",
+      "astuce_batch": "Utilise le poulet halal cuit dimanche — zéro cuisson le midi."
+    },
+    {
+      "id": "r5",
+      "nom": "Boulettes de bœuf, semoule & courgettes",
+      "portions": 1,
+      "prep_min": 15,
+      "cuisson_min": 20,
+      "ingredients": [
+        "120 g de bœuf haché",
+        "60 g de semoule (crue)",
+        "1 courgette",
+        "1/2 oignon",
+        "cumin, coriandre, sel",
+        "1 c. à s. d'huile d'olive"
+      ],
+      "etapes": [
+        "Mélanger bœuf, oignon haché et épices, former des boulettes.",
+        "Poêler les boulettes 8–10 min.",
+        "Faire gonfler la semoule ; poêler la courgette en dés."
+      ],
+      "macros": { "kcal": 600, "P": 42, "G": 52, "L": 22 },
+      "substitution_halal": "Bœuf haché halal — à acheter en boucherie (voir liste de courses).",
+      "astuce_batch": "Former le double de boulettes et congeler la moitié crue."
+    },
+    {
+      "id": "r6",
+      "nom": "Buddha bowl pois chiches rôtis & tahini",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 20,
+      "ingredients": [
+        "120 g de pois chiches",
+        "100 g de riz cuit (reste de lundi)",
+        "1 carotte râpée",
+        "1 poignée d'épinards",
+        "1 c. à s. de tahini + citron",
+        "paprika, cumin"
+      ],
+      "etapes": [
+        "Rôtir les pois chiches épicés 20 min à 200 °C.",
+        "Dresser le riz, ajouter carotte, épinards, pois chiches.",
+        "Napper de sauce tahini citronnée."
+      ],
+      "macros": { "kcal": 510, "P": 20, "G": 62, "L": 20 },
+      "substitution_halal": "",
+      "astuce_batch": "Réutilise le riz de lundi soir."
+    },
+    {
+      "id": "r7",
+      "nom": "Cabillaud au four, pommes de terre & haricots verts",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 25,
+      "ingredients": [
+        "1 dos de cabillaud",
+        "2 pommes de terre",
+        "150 g de haricots verts",
+        "1 c. à s. d'huile d'olive",
+        "ail, citron, persil"
+      ],
+      "etapes": [
+        "Pommes de terre en rondelles au four 25 min à 200 °C.",
+        "Ajouter le cabillaud à mi-cuisson (12 min).",
+        "Vapeur des haricots verts, servir avec citron."
+      ],
+      "macros": { "kcal": 480, "P": 38, "G": 44, "L": 12 },
+      "substitution_halal": "",
+      "astuce_batch": ""
+    },
+    {
+      "id": "r8",
+      "nom": "Omelette aux herbes & salade verte",
+      "portions": 1,
+      "prep_min": 5,
+      "cuisson_min": 8,
+      "ingredients": [
+        "3 œufs",
+        "1 poignée d'herbes fraîches",
+        "50 g de salade verte",
+        "1 c. à s. d'huile d'olive"
+      ],
+      "etapes": [
+        "Battre les œufs avec les herbes.",
+        "Cuire l'omelette 4 min.",
+        "Servir avec la salade assaisonnée."
+      ],
+      "macros": { "kcal": 390, "P": 24, "G": 8, "L": 28 },
+      "substitution_halal": "",
+      "astuce_batch": ""
+    },
+    {
+      "id": "r9",
+      "nom": "Curry de poulet au lait de coco & riz",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 25,
+      "ingredients": [
+        "1 blanc de poulet",
+        "100 ml de lait de coco",
+        "70 g de riz (cru)",
+        "1/2 oignon",
+        "1 c. à c. de pâte de curry",
+        "gingembre, coriandre"
+      ],
+      "etapes": [
+        "Saisir le poulet en dés.",
+        "Ajouter oignon, pâte de curry, lait de coco ; mijoter 15 min.",
+        "Servir avec le riz et la coriandre."
+      ],
+      "macros": { "kcal": 620, "P": 40, "G": 56, "L": 24 },
+      "substitution_halal": "Blanc de poulet halal — boucherie (voir liste de courses).",
+      "astuce_batch": "Le curry se congèle très bien : doubler les quantités."
+    },
+    {
+      "id": "r10",
+      "nom": "Velouté de potimarron & tartine de chèvre",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 25,
+      "ingredients": [
+        "300 g de potimarron",
+        "1 pomme de terre",
+        "1 tranche de pain complet",
+        "40 g de fromage de chèvre",
+        "muscade, sel"
+      ],
+      "etapes": [
+        "Cuire potimarron et pomme de terre 20 min.",
+        "Mixer avec un peu d'eau de cuisson.",
+        "Toaster le pain, ajouter le chèvre."
+      ],
+      "macros": { "kcal": 410, "P": 16, "G": 46, "L": 18 },
+      "substitution_halal": "",
+      "astuce_batch": "Velouté en grande quantité : 3 portions à congeler."
+    },
+    {
+      "id": "r11",
+      "nom": "Steak haché, frites au four & salade",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 25,
+      "ingredients": [
+        "1 steak haché",
+        "2 pommes de terre",
+        "50 g de salade",
+        "1 c. à s. d'huile d'olive"
+      ],
+      "etapes": [
+        "Frites maison au four 25 min à 210 °C.",
+        "Cuire le steak à la poêle.",
+        "Servir avec la salade."
+      ],
+      "macros": { "kcal": 640, "P": 40, "G": 50, "L": 28 },
+      "substitution_halal": "Steak haché halal — boucherie (voir liste de courses).",
+      "astuce_batch": ""
+    },
+    {
+      "id": "r12",
+      "nom": "Shakshuka & pain complet",
+      "portions": 1,
+      "prep_min": 10,
+      "cuisson_min": 20,
+      "ingredients": [
+        "2 œufs",
+        "200 g de tomates concassées",
+        "1/2 poivron",
+        "1/2 oignon",
+        "1 tranche de pain complet",
+        "cumin, paprika"
+      ],
+      "etapes": [
+        "Faire revenir oignon et poivron.",
+        "Ajouter tomates et épices, laisser réduire 10 min.",
+        "Casser les œufs, couvrir 5 min ; servir avec le pain."
+      ],
+      "macros": { "kcal": 450, "P": 22, "G": 38, "L": 24 },
+      "substitution_halal": "",
+      "astuce_batch": ""
+    },
+    {
+      "id": "pd1",
+      "nom": "Yaourt grec, miel & granola",
+      "portions": 1,
+      "prep_min": 3,
+      "cuisson_min": 0,
+      "ingredients": [
+        "150 g de yaourt grec",
+        "40 g de granola",
+        "1 c. à c. de miel",
+        "1 poignée de fruits rouges"
+      ],
+      "etapes": [
+        "Dresser le yaourt dans un bol.",
+        "Ajouter granola, fruits rouges et miel."
+      ],
+      "macros": { "kcal": 320, "P": 18, "G": 38, "L": 10 },
+      "substitution_halal": "",
+      "astuce_batch": "Préparer 4 pots de granola maison en début de semaine."
+    },
+    {
+      "id": "pd2",
+      "nom": "Porridge avoine, banane & amandes",
+      "portions": 1,
+      "prep_min": 5,
+      "cuisson_min": 5,
+      "ingredients": [
+        "50 g de flocons d'avoine",
+        "200 ml de lait (ou boisson végétale)",
+        "1 banane",
+        "15 g d'amandes effilées",
+        "1 c. à c. de miel"
+      ],
+      "etapes": [
+        "Verser l'avoine et le lait dans une casserole, chauffer 4–5 min à feu doux en remuant.",
+        "Trancher la banane, garnir le porridge.",
+        "Parsemer d'amandes et filer un trait de miel."
+      ],
+      "macros": { "kcal": 380, "P": 14, "G": 52, "L": 12 },
+      "substitution_halal": "",
+      "astuce_batch": "Préparer un overnight oats la veille au frigo : 0 cuisson le matin."
+    },
+    {
+      "id": "c1",
+      "nom": "Pomme & poignée de noix",
+      "portions": 1,
+      "prep_min": 1,
+      "cuisson_min": 0,
+      "ingredients": ["1 pomme", "20 g de noix"],
+      "etapes": ["Croquer."],
+      "macros": { "kcal": 210, "P": 4, "G": 22, "L": 13 },
+      "substitution_halal": "",
+      "astuce_batch": ""
+    },
+    {
+      "id": "c2",
+      "nom": "Skyr & fruits rouges",
+      "portions": 1,
+      "prep_min": 2,
+      "cuisson_min": 0,
+      "ingredients": ["150 g de skyr nature", "60 g de fruits rouges"],
+      "etapes": ["Mélanger."],
+      "macros": { "kcal": 130, "P": 17, "G": 12, "L": 1 },
+      "substitution_halal": "",
+      "astuce_batch": ""
+    }
+  ],
+  "courses": {
+    "boucherie": [
+      "2 hauts de cuisse de poulet (+2 pour les restes)",
+      "120 g de bœuf haché",
+      "1 blanc de poulet",
+      "1 steak haché"
+    ],
+    "poisson": [
+      "1 pavé de saumon",
+      "1 dos de cabillaud"
+    ],
+    "fruits_legumes": [
+      "2 carottes + 1 pour le bowl",
+      "1 panais",
+      "6 pommes de terre",
+      "150 g brocoli",
+      "2 courgettes",
+      "150 g haricots verts",
+      "1 concombre",
+      "2 avocats",
+      "3 tomates + 1 poivron",
+      "300 g potimarron",
+      "1 citron + herbes fraîches",
+      "2 bananes, fruits rouges, 1 pomme"
+    ],
+    "laitiers_oeufs": [
+      "1 boîte de 12 œufs",
+      "40 g feta",
+      "40 g fromage de chèvre",
+      "Yaourt grec + skyr",
+      "Lait (vérifier le placard)"
+    ],
+    "feculents_pain": [
+      "Riz basmati",
+      "Semoule",
+      "Lentilles vertes",
+      "Flocons d'avoine (vérifier le placard)",
+      "Pain complet + galettes de blé"
+    ],
+    "epicerie_salee": [
+      "Pois chiches",
+      "Tomates concassées",
+      "Lait de coco",
+      "Pâte de curry",
+      "Granola + miel"
+    ],
+    "epices_condiments": [
+      "Huile d'olive (vérifier le placard)",
+      "Tahini",
+      "Moutarde",
+      "Cumin, paprika, curry (vérifier le placard)"
+    ],
+    "surgeles": [
+      "Fruits rouges surgelés",
+      "Épinards en branches"
+    ]
+  }
+}
