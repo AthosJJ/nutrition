@@ -28,6 +28,14 @@
 /* ── Reset & base ────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
+/* Coupe le zoom au double-tap (taps rapides sur les cases à cocher)
+   tout en gardant le pinch-zoom pour l'accessibilité. */
+button, a, label,
+.course-item, .recipe-row, .meal-card, .day-card,
+.tab, .star-btn, .sheet-btn, .export-btn, .back-btn, .reset-btn {
+  touch-action: manipulation;
+}
+
 html, body {
   margin: 0;
   height: 100%;

@@ -685,10 +685,12 @@ function renderDetailHTML(r) {
   const ingredients = r.ingredients.map(ing => {
     const e = ingredientEmoji(ing);
     const emojiCol = `<span class="ing-emoji" aria-hidden="true">${e}</span>`;
-    // Try to split "Xg/ml/c. ... name" — display as quantity + name if possible
-    const parts = ing.match(/^(\d[\d\s/.,]*(?:kg|g|ml|cl|l|c\.\s*à\s*[sc]\.?|poignée|boîte|pavé|dos|tranche|blanc|botte|sachet)(?![a-zà-ÿ])[^a-zA-ZÀ-ÿ]*)(.*)/i);
-    if (parts) {
-      return `<li>${emojiCol}<span class="ing-q">${esc(parts[1].trim())}</span><span class="ing-n">${esc(parts[2].trim())}</span></li>`;
+    // Quantité = nombre (entier/fraction/décimal) + unité éventuelle ;
+    // le reste = nom. Permet de détacher « 1 » de « 1 banane ».
+    const m = ing.match(/^(\d+(?:[.,/]\d+)?)\s*((?:kg|g|ml|cl|l|c\.\s*à\s*[sc]\.?|poignée|boîte|pavé|dos|tranche|blanc|botte|sachet)(?![a-zà-ÿ]))?\s*(.*)/i);
+    if (m) {
+      const qty = (m[1] + (m[2] ? ' ' + m[2] : '')).trim();
+      return `<li>${emojiCol}<span class="ing-q">${esc(qty)}</span><span class="ing-n">${esc(m[3].trim())}</span></li>`;
     }
     return `<li>${emojiCol}<span class="ing-q"></span><span class="ing-n">${esc(ing)}</span></li>`;
   }).join('');
