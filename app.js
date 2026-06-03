@@ -57,6 +57,8 @@ const SVG = {
   spark: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l1.6 5.4L19 11l-5.4 1.6L12 18l-1.6-5.4L5 11l5.4-1.6z"/></svg>`,
   meat: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4a5 5 0 0 1 5 5c0 2.5-2 4.5-5 5l-6.5 6.5a2.1 2.1 0 0 1-3-3L11 11c.5-3 2.5-5 3-7z"/></svg>`,
   refresh: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4h-4"/></svg>`,
+  star: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.1l2.63 5.33 5.88.86-4.25 4.14 1 5.86L12 17.7l-5.26 2.76 1-5.86-4.25-4.14 5.88-.86z"/></svg>`,
+  calendar: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="14.5" rx="3.5"/><line x1="3.5" y1="9.5" x2="20.5" y2="9.5"/><line x1="8" y1="3" x2="8" y2="6.5"/><line x1="16" y1="3" x2="16" y2="6.5"/></svg>`,
 };
 
 function icon(name, cls = '') {
@@ -65,10 +67,17 @@ function icon(name, cls = '') {
   return el.replace('<svg ', `<svg class="${cls}" `);
 }
 
+const RATING_LABELS = {
+  0: 'Pas encore notée', 1: 'Horrible', 2: 'Pas bon',
+  3: 'Normal', 4: 'Très bon', 5: 'Incroyable',
+};
+const RATINGS_KEY = 'ratings:v1';
+
 // ── App state ──────────────────────────────────────────────
 let data = null;
 let recipeMap = {};
 let checkedItems = new Set();
+let ratings = {}; // clé = nom de recette normalisé -> { rating, name, week, ratedAt }
 let activeTab = 'aujourdhui';
 let openDetailId = null;
 
@@ -86,6 +95,7 @@ async function init() {
 
   recipeMap = Object.fromEntries(data.recettes.map(r => [r.id, r]));
   checkedItems = loadChecked();
+  ratings = loadRatings();
 
   renderToday();
   renderSemaine();
@@ -95,6 +105,7 @@ async function init() {
   setupDetailHandlers();
   setupCoursesHandlers();
   setupUpdateHandler();
+  setupExportHandlers();
 }
 
 // ── Manual update (PWA cache refresh) ──────────────────────
@@ -168,6 +179,20 @@ function setupTabs() {
 function setupDetailHandlers() {
   // Open via event delegation on all sections
   document.getElementById('app').addEventListener('click', e => {
+    // Notation par étoiles (dans la fiche ouverte)
+    const star = e.target.closest('[data-rate]');
+    if (star) {
+      const r = recipeMap[openDetailId];
+      if (r) {
+        const v = Number(star.dataset.rate);
+        setRating(r, getRating(r.nom) === v ? 0 : v); // re-tap = on enlève la note
+        const block = document.getElementById('rating-block');
+        if (block) block.innerHTML = ratingInnerHTML(r);
+        renderRecettes(); // rafraîchit les étoiles dans la liste
+      }
+      return;
+    }
+
     const trigger = e.target.closest('[data-recipe-id]');
     if (trigger) openDetail(trigger.dataset.recipeId);
 
@@ -257,6 +282,56 @@ function loadChecked() {
 function saveChecked() {
   if (!data) return;
   localStorage.setItem(`courses:${data.label_semaine}`, JSON.stringify([...checkedItems]));
+}
+
+// ── Notes des recettes (1–5) ───────────────────────────────
+// Indexées par NOM de recette (les ids r1/r2… changent quand on
+// remplace semaine.json). Stockées en localStorage, donc conservées
+// même quand le menu est remplacé.
+function ratingKey(name) {
+  return (name || '').trim().toLowerCase();
+}
+
+function loadRatings() {
+  try {
+    return JSON.parse(localStorage.getItem(RATINGS_KEY) || '{}') || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveRatings() {
+  localStorage.setItem(RATINGS_KEY, JSON.stringify(ratings));
+}
+
+function getRating(name) {
+  const e = ratings[ratingKey(name)];
+  return e ? e.rating : 0;
+}
+
+function setRating(recipe, value) {
+  const k = ratingKey(recipe.nom);
+  if (!value) {
+    delete ratings[k];
+  } else {
+    ratings[k] = {
+      rating: value,
+      name: recipe.nom,
+      week: (data && data.label_semaine) || '',
+      ratedAt: new Date().toISOString().slice(0, 10),
+    };
+  }
+  saveRatings();
+}
+
+function ratingInnerHTML(r) {
+  const cur = getRating(r.nom);
+  const stars = [1, 2, 3, 4, 5].map(n =>
+    `<button class="star-btn${n <= cur ? ' is-on' : ''}" type="button" data-rate="${n}" aria-label="${n} sur 5 — ${RATING_LABELS[n]}">${icon('star')}</button>`
+  ).join('');
+  return `<span class="rating-caption">Ta note</span>
+    <div class="rating-stars">${stars}</div>
+    <span class="rating-label${cur ? ' is-set' : ''}">${RATING_LABELS[cur]}</span>`;
 }
 
 // ── Helpers ────────────────────────────────────────────────
@@ -455,6 +530,7 @@ function renderRecettes() {
             <span>${icon('clock')} ${total} min</span>
             <span>${icon('user')} ${r.portions} pers.</span>
             <span>${r.macros.kcal} kcal</span>
+            ${getRating(r.nom) ? `<span class="row-rating" aria-label="Note ${getRating(r.nom)} sur 5">${'★'.repeat(getRating(r.nom))}</span>` : ''}
           </span>
         </span>
         <span class="recipe-chev">${icon('chevron')}</span>
@@ -467,13 +543,83 @@ function renderRecettes() {
     </div>`;
   }).join('');
 
+  const rated = Object.keys(ratings).length;
   document.getElementById('content-recettes').innerHTML = `
-    <div class="screen-head">
-      <h1 class="screen-h1">Recettes</h1>
-      <p class="screen-sub">Groupées par jour et par repas</p>
+    <div class="screen-head screen-head-row">
+      <div>
+        <h1 class="screen-h1">Recettes</h1>
+        <p class="screen-sub">Groupées par jour et par repas</p>
+      </div>
+      <button class="export-btn" id="btn-export" type="button">${icon('spark')} Exporter mes notes${rated ? ` (${rated})` : ''}</button>
     </div>
     <div class="recipe-groups">${groups}</div>
   `;
+}
+
+// ── Export des notes ───────────────────────────────────────
+function ratingsExportText() {
+  const entries = Object.values(ratings)
+    .sort((a, b) => b.rating - a.rating || a.name.localeCompare(b.name));
+  if (!entries.length) return 'Aucune recette notée pour l’instant.';
+  const lines = entries.map(e =>
+    `${'★'.repeat(e.rating)}${'☆'.repeat(5 - e.rating)}  ${e.name} (${e.rating}/5)`
+  );
+  return `Notes recettes — Coach Nutrition\n${'—'.repeat(28)}\n${lines.join('\n')}`;
+}
+
+function ratingsExportJSON() {
+  const entries = Object.values(ratings)
+    .sort((a, b) => b.rating - a.rating || a.name.localeCompare(b.name))
+    .map(e => ({ recette: e.name, note: e.rating, semaine: e.week, le: e.ratedAt }));
+  return JSON.stringify(entries, null, 2);
+}
+
+function openExport() {
+  const text = ratingsExportText();
+  const sheet = document.getElementById('export-sheet');
+  document.getElementById('export-text').value = text;
+  sheet.hidden = false;
+  requestAnimationFrame(() => sheet.classList.add('is-open'));
+}
+
+function closeExport() {
+  const sheet = document.getElementById('export-sheet');
+  sheet.classList.remove('is-open');
+  sheet.addEventListener('transitionend', () => { sheet.hidden = true; }, { once: true });
+}
+
+async function copyText(str, btn) {
+  let ok = false;
+  try {
+    await navigator.clipboard.writeText(str);
+    ok = true;
+  } catch {
+    // Repli pour iOS / contexte non sécurisé
+    const ta = document.getElementById('export-text');
+    ta.value = str;
+    ta.removeAttribute('readonly');
+    ta.select();
+    ta.setSelectionRange(0, str.length);
+    try { ok = document.execCommand('copy'); } catch { ok = false; }
+    ta.setAttribute('readonly', '');
+  }
+  if (btn) {
+    const old = btn.textContent;
+    btn.textContent = ok ? '✓ Copié' : 'Sélectionne puis copie';
+    setTimeout(() => { btn.textContent = old; }, 1600);
+  }
+}
+
+function setupExportHandlers() {
+  document.getElementById('content-recettes').addEventListener('click', e => {
+    if (e.target.closest('#btn-export')) openExport();
+  });
+  const sheet = document.getElementById('export-sheet');
+  sheet.addEventListener('click', e => {
+    if (e.target.closest('[data-export-close]')) { closeExport(); return; }
+    if (e.target.closest('#export-copy-text')) { copyText(ratingsExportText(), e.target.closest('#export-copy-text')); return; }
+    if (e.target.closest('#export-copy-json')) { copyText(ratingsExportJSON(), e.target.closest('#export-copy-json')); return; }
+  });
 }
 
 // ── Render: Recipe detail ──────────────────────────────────
@@ -490,6 +636,15 @@ function renderDetailHTML(r) {
   const steps = r.etapes.map((s, i) =>
     `<li><span class="step-n">${i + 1}</span><span class="step-t">${esc(s)}</span></li>`
   ).join('');
+
+  const prepCallout = (data.batch_cooking && r.prep_dimanche) ? `
+    <div class="callout callout-prep">
+      <span class="callout-icon">${icon('calendar')}</span>
+      <div>
+        <span class="callout-label">Prep du dimanche</span>
+        <p>${esc(r.prep_dimanche)}</p>
+      </div>
+    </div>` : '';
 
   const halalCallout = r.substitution_halal ? `
     <div class="callout">
@@ -514,6 +669,8 @@ function renderDetailHTML(r) {
     <h1 class="detail-title">${esc(r.nom)}</h1>
     <p class="detail-meta">Pour ${r.portions} personne${r.portions > 1 ? 's' : ''} · Prép : ${r.prep_min} min · Cuisson : ${r.cuisson_min} min</p>
 
+    <div class="rating-block" id="rating-block">${ratingInnerHTML(r)}</div>
+
     <div class="detail-block">
       <h3 class="detail-h3">Ingrédients</h3>
       <ul class="ingredients">${ingredients}</ul>
@@ -534,6 +691,7 @@ function renderDetailHTML(r) {
       </div>
     </div>
 
+    ${prepCallout}
     ${halalCallout}
     ${batchCallout}
   `;

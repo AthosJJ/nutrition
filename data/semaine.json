@@ -91,7 +91,8 @@
       ],
       "macros": { "kcal": 560, "P": 48, "G": 34, "L": 22 },
       "substitution_halal": "Poulet certifié halal — disponible en boucherie (voir liste de courses).",
-      "astuce_batch": "Cuire 2 hauts de cuisse en plus : ils serviront au wrap de mardi midi."
+      "astuce_batch": "Cuire 2 hauts de cuisse en plus : ils serviront au wrap de mardi midi.",
+      "prep_dimanche": "Rôtir les 4 hauts de cuisse d'un coup et laver/couper tous les légumes racines : tu gagnes la cuisson de mardi."
     },
     {
       "id": "r2",
@@ -138,7 +139,8 @@
       ],
       "macros": { "kcal": 590, "P": 40, "G": 48, "L": 24 },
       "substitution_halal": "",
-      "astuce_batch": "Doubler le riz : base du buddha bowl de mercredi midi."
+      "astuce_batch": "Doubler le riz : base du buddha bowl de mercredi midi.",
+      "prep_dimanche": "Cuire une grande casserole de riz basmati dimanche : il sert ici et au buddha bowl de mercredi."
     },
     {
       "id": "r4",

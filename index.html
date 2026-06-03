@@ -42,6 +42,23 @@
       <div class="section-inner" id="content-detail"></div>
     </div>
 
+    <!-- Export ratings sheet -->
+    <div id="export-sheet" class="sheet-overlay" hidden>
+      <div class="sheet-backdrop" data-export-close></div>
+      <div class="sheet" role="dialog" aria-label="Exporter mes notes">
+        <div class="sheet-head">
+          <h2 class="sheet-title">Mes notes</h2>
+          <button class="sheet-close" type="button" data-export-close aria-label="Fermer">✕</button>
+        </div>
+        <p class="sheet-sub">À copier pour ton agent qui prépare les repas.</p>
+        <textarea id="export-text" class="export-text" readonly></textarea>
+        <div class="sheet-actions">
+          <button class="sheet-btn primary" id="export-copy-text" type="button">Copier le texte</button>
+          <button class="sheet-btn" id="export-copy-json" type="button">Copier le JSON</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Tab bar -->
     <nav class="tab-bar" role="navigation" aria-label="Navigation principale">
       <button class="tab is-active" data-tab="aujourdhui" aria-current="page">

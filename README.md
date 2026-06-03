@@ -8,8 +8,9 @@ HTML / CSS / JavaScript vanilla — aucun build, servie telle quelle par GitHub 
 - **Aujourd'hui** — repas du jour (détecté automatiquement), citation, macros du jour
 - **Semaine** — planning des 7 jours (dimanche → samedi), jour en cours mis en évidence
 - **Recettes** — toutes les recettes groupées par jour, avec vue détail (ingrédients, étapes, macros, substitution halal, astuce batch)
+- **Notes** — chaque recette se note de 1 à 5 ; bouton « Exporter mes notes » (texte ou JSON) à donner à ton agent
 - **Courses** — liste par rayon, cases cochables persistées (localStorage), barre de progression
-- **PWA** — installable sur l'écran d'accueil iOS, fonctionne hors-ligne (service worker)
+- **PWA** — installable sur l'écran d'accueil iOS, fonctionne hors-ligne (service worker), bouton de mise à jour
 
 ## Mettre à jour le menu de la semaine
 
@@ -22,6 +23,9 @@ Schéma : voir le fichier existant. Points clés :
 - `collations` est une liste d'ids
 - chaque id renvoie à un objet de `recettes`
 - changer `label_semaine` réinitialise automatiquement les cases cochées des courses
+- champ optionnel `prep_dimanche` sur une recette : affiché en encadré « Prep du dimanche » dans la fiche, **uniquement si `batch_cooking` vaut `true`** (absent = rien)
+
+> Les **notes des recettes** sont stockées séparément (localStorage, indexées par **nom** de recette), donc remplacer `data/semaine.json` ne les efface jamais.
 
 ## Structure
 

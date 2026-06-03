@@ -1051,3 +1051,174 @@ button {
   background: var(--accent-soft);
   border-color: transparent;
 }
+
+/* Prep du dimanche : callout mis en avant */
+.callout-prep {
+  box-shadow: inset 4px 0 0 var(--accent);
+}
+
+/* ── Note de recette (1–5) ───────────────────────────────── */
+.rating-block {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-card);
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.rating-caption {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-faint);
+}
+
+.rating-stars { display: flex; gap: 4px; }
+
+.star-btn {
+  border: none;
+  background: none;
+  padding: 3px;
+  line-height: 0;
+  cursor: pointer;
+  color: #ddd6c7;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s ease;
+}
+
+.star-btn svg { width: 30px; height: 30px; display: block; }
+.star-btn.is-on { color: #e0a878; }
+.star-btn:active { transform: scale(0.82); }
+
+.rating-label { font-size: 14px; font-weight: 700; color: var(--text-faint); }
+.rating-label.is-set { color: #9a6a3c; }
+
+.row-rating {
+  color: #e0a878;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* ── En-tête Recettes + bouton export ────────────────────── */
+.screen-head-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.export-btn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--accent-soft);
+  border: none;
+  color: var(--accent-ink);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill);
+  margin-top: 6px;
+  white-space: nowrap;
+  transition: transform 0.12s ease;
+}
+
+.export-btn svg { width: 14px; height: 14px; }
+.export-btn:active { transform: scale(0.97); }
+
+/* ── Bottom sheet (export) ───────────────────────────────── */
+.sheet-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.sheet-overlay[hidden] { display: none; }
+
+.sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 35, 25, 0.4);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.sheet-overlay.is-open .sheet-backdrop { opacity: 1; }
+
+.sheet {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg);
+  border-radius: 24px 24px 0 0;
+  padding: 18px 18px calc(env(safe-area-inset-bottom, 0px) + 20px);
+  box-shadow: var(--shadow-raised);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.sheet-overlay.is-open .sheet { transform: translateY(0); }
+
+.sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sheet-title { margin: 0; font-size: 20px; font-weight: 800; }
+
+.sheet-close {
+  border: none;
+  background: var(--surface-2);
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sheet-sub { margin: 4px 0 12px; font-size: 13.5px; color: var(--text-muted); }
+
+.export-text {
+  width: 100%;
+  height: 190px;
+  resize: none;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.55;
+  padding: 12px;
+  -webkit-text-size-adjust: 100%;
+}
+
+.sheet-actions { display: flex; gap: 10px; margin-top: 12px; }
+
+.sheet-btn {
+  flex: 1;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--surface-2);
+  color: var(--text);
+  transition: transform 0.12s ease;
+}
+
+.sheet-btn.primary { background: var(--accent); color: #fff; }
+.sheet-btn:active { transform: scale(0.98); }
