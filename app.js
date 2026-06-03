@@ -56,6 +56,7 @@ const SVG = {
   moon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 13.5A7 7 0 0 1 10.5 5a7 7 0 1 0 8.5 8.5z"/></svg>`,
   spark: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l1.6 5.4L19 11l-5.4 1.6L12 18l-1.6-5.4L5 11l5.4-1.6z"/></svg>`,
   meat: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4a5 5 0 0 1 5 5c0 2.5-2 4.5-5 5l-6.5 6.5a2.1 2.1 0 0 1-3-3L11 11c.5-3 2.5-5 3-7z"/></svg>`,
+  refresh: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4h-4"/></svg>`,
 };
 
 function icon(name, cls = '') {
@@ -93,6 +94,46 @@ async function init() {
   setupTabs();
   setupDetailHandlers();
   setupCoursesHandlers();
+  setupUpdateHandler();
+}
+
+// ── Manual update (PWA cache refresh) ──────────────────────
+// iOS garde le shell (HTML/CSS/JS) en cache. Ce bouton va chercher
+// la dernière version du service worker, puis recharge la page pour
+// servir le nouveau code et le menu à jour (semaine.json en network-first).
+function setupUpdateHandler() {
+  document.getElementById('app').addEventListener('click', e => {
+    const btn = e.target.closest('[data-action="refresh"]');
+    if (btn) triggerUpdate(btn);
+  });
+}
+
+async function triggerUpdate(btn) {
+  if (btn.classList.contains('is-updating')) return;
+  btn.classList.add('is-updating');
+  try {
+    if ('serviceWorker' in navigator) {
+      const reg = await navigator.serviceWorker.getRegistration();
+      if (reg) {
+        await reg.update();
+        const fresh = reg.installing || reg.waiting;
+        if (fresh) {
+          await new Promise(resolve => {
+            const timer = setTimeout(resolve, 4000);
+            fresh.addEventListener('statechange', () => {
+              if (fresh.state === 'activated' || fresh.state === 'redundant') {
+                clearTimeout(timer);
+                resolve();
+              }
+            });
+          });
+        }
+      }
+    }
+  } catch (_) {
+    // hors-ligne ou pas de SW : on recharge quand même
+  }
+  location.reload();
 }
 
 // ── Tab navigation ─────────────────────────────────────────
@@ -304,8 +345,13 @@ function renderToday() {
     ? `<p class="quote-source">${esc(citation.source)}</p>` : '';
 
   document.getElementById('content-aujourdhui').innerHTML = `
-    <div class="today-eyebrow">Aujourd'hui</div>
-    <h1 class="today-date">${esc(label)}${dateStr ? ' ' + esc(dateStr) : ''}</h1>
+    <div class="today-head">
+      <div class="today-headings">
+        <div class="today-eyebrow">Aujourd'hui</div>
+        <h1 class="today-date">${esc(label)}${dateStr ? ' ' + esc(dateStr) : ''}</h1>
+      </div>
+      <button class="refresh-btn" type="button" data-action="refresh" aria-label="Mettre à jour le menu" title="Mettre à jour">${icon('refresh')}</button>
+    </div>
 
     <div class="quote-card">
       <span class="quote-mark">"</span>
