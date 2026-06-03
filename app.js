@@ -44,6 +44,64 @@ const COURSES_SECTIONS = [
   { key: 'surgeles', label: 'Surgelés', emoji: '🧊', special: false },
 ];
 
+// ── Emoji par ingrédient ───────────────────────────────────
+// Recherché dans le nom normalisé (sans accents). Ordre = du plus
+// spécifique au plus général. Pas de correspondance = pas d'emoji.
+const EMOJI_MAP = [
+  [['lait de coco', 'noix de coco', 'coco'], '🥥'],
+  [['pomme de terre', 'pommes de terre'], '🥔'],
+  [['huile'], '🫒'],
+  [['poulet', 'dinde', 'volaille'], '🍗'],
+  [['boeuf', 'steak', 'hache', 'viande'], '🥩'],
+  [['saumon', 'cabillaud', 'poisson', 'thon', 'crevette', 'pave'], '🐟'],
+  [['oeuf'], '🥚'],
+  [['banane'], '🍌'],
+  [['citron'], '🍋'],
+  [['avocat'], '🥑'],
+  [['tomate'], '🍅'],
+  [['carotte'], '🥕'],
+  [['courgette', 'concombre'], '🥒'],
+  [['potimarron', 'potiron', 'courge'], '🎃'],
+  [['oignon', 'echalote'], '🧅'],
+  [['poivron'], '🫑'],
+  [['ail'], '🧄'],
+  [['brocoli'], '🥦'],
+  [['haricot vert', 'haricots vert'], '🫛'],
+  [['pois chiche', 'lentille', 'haricot'], '🫘'],
+  [['epinard', 'salade', 'roquette', 'mache', 'laitue', 'chou'], '🥬'],
+  [['pomme'], '🍎'],
+  [['fruits rouges', 'fraise', 'framboise', 'myrtille', 'baie'], '🍓'],
+  [['miel'], '🍯'],
+  [['curry'], '🍛'],
+  [['riz', 'basmati', 'semoule', 'boulgour', 'quinoa'], '🍚'],
+  [['avoine', 'flocons', 'granola', 'muesli'], '🥣'],
+  [['galette', 'wrap', 'tortilla'], '🌯'],
+  [['pain', 'ble', 'pates', 'baguette'], '🍞'],
+  [['amande', 'noix', 'noisette', 'cajou', 'graine'], '🥜'],
+  [['feta', 'chevre', 'fromage', 'parmesan', 'mozzarella'], '🧀'],
+  [['yaourt', 'skyr', 'lait', 'creme'], '🥛'],
+  [['gingembre'], '🫚'],
+  [['herbe', 'persil', 'coriandre', 'thym', 'basilic', 'menthe', 'ciboulette', 'aneth'], '🌿'],
+  [['sel', 'poivre', 'cumin', 'paprika', 'muscade', 'epice', 'curcuma', 'piment', 'moutarde'], '🧂'],
+];
+
+function normalizeText(s) {
+  return (s || '')
+    .toLowerCase()
+    .replace(/œ/g, 'oe')
+    .replace(/æ/g, 'ae')
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '');
+}
+
+function ingredientEmoji(text) {
+  const t = normalizeText(text);
+  for (const [keys, emoji] of EMOJI_MAP) {
+    if (keys.some(k => t.includes(k))) return emoji;
+  }
+  return '';
+}
+
 // ── SVG icon helpers ───────────────────────────────────────
 const SVG = {
   chevron: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>`,
@@ -69,7 +127,7 @@ function icon(name, cls = '') {
 
 const RATING_LABELS = {
   0: 'Pas encore notée', 1: 'Horrible', 2: 'Pas bon',
-  3: 'Normal', 4: 'Très bon', 5: 'Incroyable',
+  3: 'Normal', 4: 'Très bon', 5: 'Incroyable wsh',
 };
 const RATINGS_KEY = 'ratings:v1';
 
@@ -625,12 +683,14 @@ function setupExportHandlers() {
 // ── Render: Recipe detail ──────────────────────────────────
 function renderDetailHTML(r) {
   const ingredients = r.ingredients.map(ing => {
+    const e = ingredientEmoji(ing);
+    const emojiCol = `<span class="ing-emoji" aria-hidden="true">${e}</span>`;
     // Try to split "Xg/ml/c. ... name" — display as quantity + name if possible
-    const parts = ing.match(/^(\d[\d\s/.,]*(?:g|kg|ml|cl|l|c\.\s*à\s*[sc]\.?|poignée|boîte|pavé|dos|tranche|blanc|botte|sachet)[^a-zA-ZÀ-ÿ]*)(.*)/i);
+    const parts = ing.match(/^(\d[\d\s/.,]*(?:kg|g|ml|cl|l|c\.\s*à\s*[sc]\.?|poignée|boîte|pavé|dos|tranche|blanc|botte|sachet)(?![a-zà-ÿ])[^a-zA-ZÀ-ÿ]*)(.*)/i);
     if (parts) {
-      return `<li><span class="ing-q">${esc(parts[1].trim())}</span><span class="ing-n">${esc(parts[2].trim())}</span></li>`;
+      return `<li>${emojiCol}<span class="ing-q">${esc(parts[1].trim())}</span><span class="ing-n">${esc(parts[2].trim())}</span></li>`;
     }
-    return `<li><span class="ing-q"></span><span class="ing-n">${esc(ing)}</span></li>`;
+    return `<li>${emojiCol}<span class="ing-q"></span><span class="ing-n">${esc(ing)}</span></li>`;
   }).join('');
 
   const steps = r.etapes.map((s, i) =>
@@ -754,6 +814,8 @@ function renderCourses() {
         <span class="progress-label">${doneCount}/${allKeys.length}</span>
       </div>
     </div>
+
+    ${(allKeys.length && pct === 100) ? `<div class="courses-done">🎉 Liste complète — bravo !</div>` : ''}
 
     <div class="course-sections">${sections}</div>
   `;
