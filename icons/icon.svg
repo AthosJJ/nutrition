@@ -1,12 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
-  <rect width="192" height="192" rx="42" fill="#b15a3c"/>
-  <circle cx="96" cy="86" r="44" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-  <circle cx="96" cy="86" r="32" fill="rgba(255,255,255,0.9)"/>
-  <path d="M84 72 C84 72 80 76 80 82 C80 88 84 92 88 92 L88 108" stroke="#b15a3c" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-  <line x1="80" y1="72" x2="80" y2="82" stroke="#b15a3c" stroke-width="3" stroke-linecap="round"/>
-  <line x1="84" y1="72" x2="84" y2="82" stroke="#b15a3c" stroke-width="3" stroke-linecap="round"/>
-  <line x1="88" y1="72" x2="88" y2="82" stroke="#b15a3c" stroke-width="3" stroke-linecap="round"/>
-  <path d="M104 72 C104 72 112 78 112 86 C112 92 108 96 104 97 L104 108" stroke="#b15a3c" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-  <rect x="64" y="128" width="64" height="8" rx="4" fill="rgba(255,255,255,0.7)"/>
-  <rect x="74" y="142" width="44" height="6" rx="3" fill="rgba(255,255,255,0.5)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#90af94"/>
+      <stop offset="1" stop-color="#6d8d74"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <g fill="#fbf7ef">
+    <!-- Fourchette -->
+    <rect x="171" y="120" width="15" height="92" rx="7.5"/>
+    <rect x="199" y="120" width="15" height="92" rx="7.5"/>
+    <rect x="227" y="120" width="15" height="92" rx="7.5"/>
+    <path d="M168 198 L168 196 Q168 250 206 256 Q244 250 244 196 L244 198 Z"/>
+    <rect x="197" y="246" width="19" height="150" rx="9.5"/>
+    <!-- Couteau -->
+    <path d="M300 122 Q307 116 313 124 Q323 172 318 250 L300 250 Z"/>
+    <rect x="300" y="246" width="17" height="150" rx="8.5"/>
+  </g>
 </svg>

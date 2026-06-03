@@ -174,13 +174,20 @@ function setupDetailHandlers() {
     if (e.target.closest('#btn-back-detail')) closeDetail();
   });
 
-  // Swipe down to close
+  // Swipe pour fermer : vers le bas, ou vers la droite (retour façon iOS)
   const overlay = document.getElementById('detail-overlay');
-  let touchStartY = 0;
-  overlay.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; }, { passive: true });
+  let touchStartY = 0, touchStartX = 0;
+  overlay.addEventListener('touchstart', e => {
+    touchStartY = e.touches[0].clientY;
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
   overlay.addEventListener('touchend', e => {
-    const delta = e.changedTouches[0].clientY - touchStartY;
-    if (delta > 80 && overlay.scrollTop === 0) closeDetail();
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    // Swipe vers le bas depuis le haut de la page
+    if (dy > 80 && Math.abs(dy) > Math.abs(dx) && overlay.scrollTop === 0) { closeDetail(); return; }
+    // Swipe gauche -> droite franc = retour
+    if (dx > 80 && Math.abs(dx) > Math.abs(dy) * 2) { closeDetail(); }
   }, { passive: true });
 }
 
