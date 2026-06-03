@@ -1,24 +1,27 @@
-/* ── Tokens ──────────────────────────────────────────────── */
+/* ── Tokens — Direction « Pastel » ───────────────────────── */
+/* Crème + pastels basse saturation, formes arrondies, ombres tendres. */
 :root {
-  --bg: #faf9f5;
+  --bg: #fbf7ef;
   --surface: #ffffff;
-  --surface-2: #f3f2ec;
-  --text: #1b1c18;
-  --text-muted: #6c6e64;
-  --text-faint: #9c9d92;
-  --accent: #b15a3c;
-  --accent-ink: #8c4329;
-  --accent-soft: #f4e7e0;
-  --border: rgba(20, 20, 10, 0.09);
-  --radius-card: 14px;
-  --radius-sm: 11px;
-  --radius-pill: 7px;
-  --shadow-card: 0 1px 2px rgba(20, 20, 10, 0.05);
-  --shadow-raised: 0 2px 6px rgba(20, 20, 10, 0.07);
-  --tab-bg: rgba(250, 249, 245, 0.92);
-  --tab-border: rgba(20, 20, 10, 0.08);
-  --font-body: 'Inter Tight', system-ui, sans-serif;
-  --font-display: 'Newsreader', Georgia, serif;
+  --surface-2: #f6f1e7;
+  --text: #2d2a24;
+  --text-muted: #857e72;
+  --text-faint: #a9a294;
+  --accent: #7d9b81;
+  --accent-ink: #41614a;
+  --accent-soft: #e6efe6;
+  --border: rgba(60, 50, 30, 0.09);
+  --radius-card: 22px;
+  --radius-sm: 16px;
+  --radius-pill: 999px;
+  --shadow-card: 0 8px 24px -12px rgba(80, 70, 40, 0.28);
+  --shadow-raised: 0 12px 30px -10px rgba(80, 70, 40, 0.32);
+  --tab-bg: rgba(255, 255, 255, 0.9);
+  --tab-border: rgba(60, 50, 30, 0.08);
+  --font-body: 'Nunito', system-ui, sans-serif;
+  --font-display: 'Nunito', system-ui, sans-serif;
+  --display-weight: 800;
+  --card-weight: 800;
   --tab-height: 56px;
 }
 
@@ -118,7 +121,7 @@ button {
 
 .tab-label {
   font-size: 10.5px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1px;
   line-height: 1;
 }
@@ -129,7 +132,7 @@ button {
 .screen-h1 {
   margin: 0;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: var(--display-weight);
   letter-spacing: -0.4px;
   line-height: 1.15;
 }
@@ -153,7 +156,7 @@ button {
 .today-date {
   margin: 0 0 20px;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: var(--display-weight);
   letter-spacing: -0.5px;
   line-height: 1.15;
 }
@@ -162,8 +165,8 @@ button {
 .quote-card {
   position: relative;
   padding: 22px 22px 18px;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
   overflow: hidden;
@@ -172,13 +175,14 @@ button {
 
 .quote-mark {
   position: absolute;
-  top: -6px;
+  top: -2px;
   left: 14px;
   font-family: var(--font-display);
-  font-size: 64px;
+  font-size: 72px;
+  font-weight: 800;
   line-height: 1;
-  color: var(--accent);
-  opacity: 0.28;
+  color: var(--accent-ink);
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -189,8 +193,8 @@ button {
   font-size: 20px;
   line-height: 1.45;
   color: var(--text);
-  font-style: italic;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .quote-source {
@@ -205,8 +209,8 @@ button {
   margin: 24px 2px 12px;
   font-size: 21px;
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
   color: var(--text);
 }
 
@@ -241,9 +245,9 @@ button {
 
 .meal-stripe {
   flex: none;
-  width: 4px;
+  width: 6px;
   align-self: stretch;
-  background: var(--text-faint);
+  background: var(--accent);
 }
 
 .meal-body {
@@ -265,7 +269,7 @@ button {
 
 .meal-name {
   font-size: 16.5px;
-  font-weight: 600;
+  font-weight: var(--card-weight);
   line-height: 1.3;
   color: var(--text);
 }
@@ -321,8 +325,8 @@ button {
   gap: 13px;
   padding: 16px 18px;
   border-radius: var(--radius-card);
-  background: transparent;
-  border: 1px dashed var(--border);
+  background: var(--surface-2);
+  border: 1px solid transparent;
 }
 
 .free-icon {
@@ -469,8 +473,9 @@ button {
 }
 
 .day-card.is-today {
-  box-shadow: inset 3px 0 0 var(--accent), var(--shadow-card);
-  border-color: var(--accent);
+  background: var(--accent-soft);
+  border: 1.5px solid var(--accent);
+  box-shadow: var(--shadow-card);
 }
 
 .day-card-head {
@@ -674,7 +679,8 @@ button {
   margin: 4px 0 0;
   font-size: 26px;
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 800;
+  letter-spacing: -0.3px;
   line-height: 1.18;
 }
 
@@ -969,3 +975,17 @@ button {
 
 /* ── Scroll to top on tab change ─────────────────────────── */
 .tab-section { scroll-behavior: auto; }
+
+/* ── Direction « Pastel » — cartes douces ────────────────── */
+/* Formes arrondies + ombres tendres : on efface les filets. */
+.meal-card,
+.day-card,
+.recipe-row,
+.course-section { border-color: transparent; }
+
+.total-card,
+.week-banner,
+.callout {
+  background: var(--surface-2);
+  border-color: transparent;
+}
