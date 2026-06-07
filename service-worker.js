@@ -1,4 +1,4 @@
-const SHELL_CACHE = 'nutri-v8';
+const SHELL_CACHE = 'nutri-v9';
 const DATA_CACHE = 'nutri-data-v1';
 
 const SHELL_ASSETS = [

@@ -42,6 +42,7 @@ const COURSES_SECTIONS = [
   { key: 'epicerie_salee', label: 'Épicerie salée', emoji: '🥫', special: false },
   { key: 'epices_condiments', label: 'Épices, huiles & condiments', emoji: '🧂', special: false },
   { key: 'surgeles', label: 'Surgelés', emoji: '🧊', special: false },
+  { key: 'maison_hygiene', label: 'Maison & hygiène', emoji: '🧼', special: false },
 ];
 
 // ── Emoji par ingrédient ───────────────────────────────────
