@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "label_semaine": "Semaine du 7 juin 2026",
+  "label_semaine": "Semaine du 15 juin 2026",
   "personnes": 2,
   "batch_cooking": true,
   "petit_dej_collations_inclus": true,
-  "equilibre_semaine": "5 sources de protéines sur les dîners (poulet ×2, bœuf, agneau, saumon, cabillaud) + œufs et laitages au petit-déj. Féculents complets tournants (riz complet, nouilles, boulgour, avoine), légumes à chaque assiette. Chaque midi = le dîner de la veille (restes emportés au travail).",
+  "equilibre_semaine": "Sources de protéines variées sur la semaine : cabillaud, bœuf (lasagnes + steak), poulet (champignons + tajine). Féculents complets (riz, semoule, patate douce, pommes de terre) et légumes à chaque assiette. Chaque midi = le dîner de la veille (restes emportés au travail).",
   "citations": [
     {
       "texte": "Cap de la semaine : protéines à chaque repas, féculents complets autour de l'entraînement, légumes en volume, bons gras maîtrisés.",
@@ -14,286 +14,239 @@
   "jours": [
     {
       "jour": "dimanche",
-      "date_affichee": "7 juin",
+      "date_affichee": "14 juin",
       "petit_dejeuner": "pd1",
       "collations": [
         "c1"
       ],
       "dejeuner": null,
-      "diner": "r1"
+      "diner": null
     },
     {
       "jour": "lundi",
-      "date_affichee": "8 juin",
+      "date_affichee": "15 juin",
       "petit_dejeuner": "pd2",
       "collations": [
         "c2"
+      ],
+      "dejeuner": null,
+      "diner": "r1"
+    },
+    {
+      "jour": "mardi",
+      "date_affichee": "16 juin",
+      "petit_dejeuner": "pd3",
+      "collations": [
+        "c3"
       ],
       "dejeuner": "r1",
       "diner": "r2"
     },
     {
-      "jour": "mardi",
-      "date_affichee": "9 juin",
-      "petit_dejeuner": "pd3",
+      "jour": "mercredi",
+      "date_affichee": "17 juin",
+      "petit_dejeuner": "pd1",
       "collations": [
-        "c3"
+        "c4"
       ],
       "dejeuner": "r2",
       "diner": "r3"
     },
     {
-      "jour": "mercredi",
-      "date_affichee": "10 juin",
-      "petit_dejeuner": "pd1",
+      "jour": "jeudi",
+      "date_affichee": "18 juin",
+      "petit_dejeuner": "pd2",
       "collations": [
-        "c4"
+        "c5"
       ],
       "dejeuner": "r3",
       "diner": "r4"
     },
     {
-      "jour": "jeudi",
-      "date_affichee": "11 juin",
-      "petit_dejeuner": "pd2",
+      "jour": "vendredi",
+      "date_affichee": "19 juin",
+      "petit_dejeuner": "pd3",
       "collations": [
-        "c5"
+        "c1"
       ],
       "dejeuner": "r4",
       "diner": "r5"
     },
     {
-      "jour": "vendredi",
-      "date_affichee": "12 juin",
-      "petit_dejeuner": "pd3",
-      "collations": [
-        "c1"
-      ],
-      "dejeuner": "r5",
-      "diner": "r6"
-    },
-    {
       "jour": "samedi",
-      "date_affichee": "13 juin",
+      "date_affichee": "20 juin",
       "petit_dejeuner": "pd1",
       "collations": [
         "c2"
       ],
-      "dejeuner": "r6",
+      "dejeuner": "r5",
       "diner": null
     }
   ],
   "recettes": [
     {
       "id": "r1",
-      "nom": "Poulet yassa citron-oignon & riz complet",
-      "portions": 4,
-      "prep_min": 15,
-      "cuisson_min": 40,
-      "ingredients": [
-        "700 g de hauts de cuisse de poulet désossés (halal)",
-        "240 g de riz complet (cru)",
-        "5 gros oignons",
-        "3 citrons (jus)",
-        "3 gousses d'ail",
-        "1 c. à s. de moutarde (sans vin)",
-        "1 cube de bouillon de volaille sans alcool",
-        "1-2 feuilles de laurier",
-        "3 c. à s. d'huile d'olive",
-        "sel, poivre"
-      ],
-      "etapes": [
-        "Fais mariner le poulet 15 min : jus de citron, ail écrasé, moutarde, sel, poivre.",
-        "Émince les oignons et fais-les fondre 18-20 min à feu doux dans l'huile (bien compotés).",
-        "Égoutte le poulet (garde la marinade), saisis-le 3-4 min par face, réserve.",
-        "Ajoute marinade + oignons + bouillon + laurier, remets le poulet, mijote 20-25 min.",
-        "Cuis le riz complet (18 min). Sers le poulet nappé d'oignons fondants."
-      ],
-      "macros": {
-        "kcal": 610,
-        "P": 48,
-        "G": 58,
-        "L": 18
-      },
-      "substitution_halal": "Bouillon sans alcool, acidité au citron (jamais de vin) ; moutarde sans vin.",
-      "astuce_batch": "Pour 4 portions : 2 le soir + 2 pour le déjeuner du lendemain. Réchauffe excellent, encore meilleur le lendemain.",
-      "prep_dimanche": "Méthode de la semaine : chaque plat est cuit en 4 portions. Le soir, mets 2 portions de côté (frigo sous 2h, à consommer sous 24h) pour le déjeuner du lendemain."
-    },
-    {
-      "id": "r2",
-      "nom": "Chili con carne maison, riz complet & avocat",
-      "portions": 4,
-      "prep_min": 15,
-      "cuisson_min": 30,
-      "ingredients": [
-        "700 g de bœuf haché 5 % (halal)",
-        "240 g de riz complet (cru)",
-        "1 boîte de haricots rouges (400 g, égouttés)",
-        "1 boîte de tomates concassées (400 g)",
-        "1 c. à s. de concentré de tomate",
-        "2 oignons",
-        "3 gousses d'ail",
-        "2 poivrons",
-        "2 avocats (pour servir)",
-        "2 c. à s. d'huile d'olive",
-        "cumin, paprika fumé, origan, piment, sel",
-        "jus de citron"
-      ],
-      "etapes": [
-        "Fais revenir oignons + ail + poivrons 5 min.",
-        "Ajoute le bœuf, colore 8 min, puis les épices + concentré de tomate.",
-        "Verse tomates + haricots + 1 verre d'eau, mijote 20-25 min à découvert.",
-        "Cuis le riz. Sers avec l'avocat et un trait de citron."
-      ],
-      "macros": {
-        "kcal": 640,
-        "P": 46,
-        "G": 52,
-        "L": 24
-      },
-      "substitution_halal": "La profondeur vient du paprika fumé + concentré de tomate (jamais de vin/bière).",
-      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi. Parfait réchauffé, les saveurs se développent."
-    },
-    {
-      "id": "r3",
-      "nom": "Nouilles sautées au poulet & légumes",
-      "portions": 4,
-      "prep_min": 12,
-      "cuisson_min": 15,
-      "ingredients": [
-        "600 g de blanc de poulet (halal)",
-        "300 g de nouilles (de riz ou complètes)",
-        "2 carottes",
-        "2 poivrons rouges",
-        "2 courgettes",
-        "3 gousses d'ail",
-        "1 gros morceau de gingembre frais",
-        "5-6 c. à s. de sauce soja sans alcool / halal",
-        "2 c. à s. d'huile de sésame",
-        "1-2 c. à s. d'huile (wok)",
-        "2 c. à c. de miel",
-        "jus de citron",
-        "graines de sésame",
-        "oignons nouveaux"
-      ],
-      "etapes": [
-        "Cuis les nouilles, égoutte, réserve.",
-        "Émince le poulet, saisis-le 6 min au wok bien chaud, réserve.",
-        "Sauté carottes, poivrons et courgettes en fines lamelles 6 min ; ajoute ail + gingembre.",
-        "Remets poulet + nouilles, verse sauce soja + miel + huile de sésame, saute 2 min.",
-        "Finis au citron, sésame et oignons nouveaux."
-      ],
-      "macros": {
-        "kcal": 600,
-        "P": 48,
-        "G": 62,
-        "L": 15
-      },
-      "substitution_halal": "Sauce soja sans alcool (vérifie l'étiquette) ; mirin/saké remplacés par 1-2 c. à c. de miel.",
-      "astuce_batch": "Le dîner rapide de la semaine. Pour 4 portions : garde 2 portions pour le lendemain. Réchauffe à la poêle de préférence."
-    },
-    {
-      "id": "r4",
-      "nom": "Saumon laqué miel-soja, riz complet & brocoli sésame",
+      "nom": "Cabillaud poêlé, écrasé de patate douce & épinards",
       "portions": 4,
       "prep_min": 10,
       "cuisson_min": 20,
       "ingredients": [
-        "4 pavés de saumon (~150 g pièce)",
-        "240 g de riz complet (cru)",
-        "2 brocolis (~800 g)",
-        "3 c. à s. de sauce soja sans alcool",
-        "2 c. à s. de miel",
-        "1 c. à c. d'huile de sésame",
-        "2 gousses d'ail",
-        "1 morceau de gingembre",
-        "jus de citron",
-        "graines de sésame"
+        "4 dos de cabillaud (~170 g pièce)",
+        "1 kg de patate douce",
+        "400 g d'épinards frais",
+        "4 gousses d'ail",
+        "1 citron",
+        "4 c. à s. d'huile d'olive",
+        "paprika, sel, poivre"
       ],
       "etapes": [
-        "Four à 200 °C. Mélange soja + miel + ail + gingembre râpé pour le laquage.",
-        "Pose le saumon sur papier cuisson, badigeonne, enfourne 12-15 min en re-badigeonnant 1 fois.",
-        "Cuis le riz. Brocoli vapeur 8 min, sésame + filet d'huile de sésame.",
-        "Citron sur le saumon au moment de servir."
+        "Cuis la patate douce en cubes (eau ou vapeur) 15 min, écrase avec 2 c. à s. d'huile et du sel.",
+        "Poêle le cabillaud 3-4 min par face, paprika et sel.",
+        "Fais tomber les épinards 3-4 min avec l'ail émincé.",
+        "Sers le poisson sur l'écrasé + épinards, trait de citron."
       ],
       "macros": {
-        "kcal": 590,
+        "kcal": 480,
         "P": 42,
-        "G": 48,
-        "L": 24
+        "G": 45,
+        "L": 14
       },
-      "substitution_halal": "Laquage miel + soja sans alcool (pas de mirin).",
-      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain. Réchauffe doucement, ou déguste froid émietté sur le riz le lendemain (très bon)."
+      "substitution_halal": "",
+      "astuce_batch": "Recette en 4 portions : garde 2 portions au frigo (sous 2h) pour le déjeuner du lendemain. Réchauffe en douceur pour garder le poisson moelleux."
     },
     {
-      "id": "r5",
-      "nom": "Boulettes d'agneau marocaines, sauce tomate & boulgour",
+      "id": "r2",
+      "nom": "Lasagnes bœuf & béchamel maison",
       "portions": 4,
-      "prep_min": 20,
-      "cuisson_min": 25,
+      "prep_min": 25,
+      "cuisson_min": 35,
       "ingredients": [
-        "700 g d'agneau haché (halal) — ou 350 g agneau + 350 g bœuf 5 %",
-        "240 g de boulgour (cru)",
-        "1 boîte de tomates concassées (400 g)",
+        "600 g de bœuf haché 5 %",
+        "12 feuilles de lasagne",
+        "2 boîtes de tomates concassées (800 g)",
         "2 oignons",
         "3 gousses d'ail",
-        "persil, coriandre",
-        "1 œuf",
-        "2 c. à s. de chapelure (ou flocons d'avoine mixés)",
-        "cumin, coriandre moulue, paprika, cannelle, sel, poivre",
-        "2 c. à s. d'huile d'olive"
+        "80 g de concentré de tomate",
+        "1 L de lait",
+        "60 g de farine",
+        "60 g de beurre",
+        "noix de muscade",
+        "120 g de mozzarella râpée (ou emmental)",
+        "3 c. à s. d'huile d'olive",
+        "origan, basilic, sel, poivre"
       ],
       "etapes": [
-        "Mélange agneau + œuf + chapelure + 1/2 oignon râpé + ail + herbes + épices ; forme des boulettes.",
-        "Dore-les 6-8 min dans l'huile, réserve.",
-        "Fais revenir le reste d'oignon + ail, ajoute tomates + épices ; mijote 5 min.",
-        "Remets les boulettes, mijote 12-15 min à couvert.",
-        "Couvre le boulgour d'eau bouillante salée + filet d'huile, laisse gonfler 10 min, égrène."
+        "Sauce bolognaise : fais revenir oignon + ail, ajoute le bœuf, colore. Ajoute tomates + concentré + herbes, mijote 15-20 min.",
+        "Béchamel : fais fondre le beurre, ajoute la farine (roux), verse le lait peu à peu en fouettant 5 min jusqu'à épaississement, muscade, sel.",
+        "Monte les couches : bolognaise → lasagne → béchamel, répète. Termine par béchamel + mozzarella.",
+        "Four 200 °C, 30-35 min jusqu'à gratiné."
       ],
       "macros": {
-        "kcal": 650,
-        "P": 44,
+        "kcal": 620,
+        "P": 45,
         "G": 52,
-        "L": 26
+        "L": 24
       },
-      "substitution_halal": "Agneau halal ; aucune cuisson au vin.",
-      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi. Excellent réchauffé (les boulettes s'imprègnent de sauce)."
+      "substitution_halal": "Bœuf haché halal ; aucun vin dans la bolognaise (le mijotage tomate suffit). Pour le fromage, vérifie une présure végétale si besoin.",
+      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi. Les lasagnes se réchauffent très bien au four."
     },
     {
-      "id": "r6",
-      "nom": "Curry de cabillaud au lait de coco, riz & épinards",
+      "id": "r3",
+      "nom": "Steak & potatoes maison, salade verte",
       "portions": 4,
-      "prep_min": 12,
-      "cuisson_min": 20,
+      "prep_min": 15,
+      "cuisson_min": 30,
       "ingredients": [
-        "700 g de dos de cabillaud (en gros morceaux)",
-        "240 g de riz complet (cru)",
-        "1 boîte de lait de coco (400 ml, allégé si possible)",
-        "200 g de tomates concassées (1/2 boîte)",
-        "250 g d'épinards frais",
-        "1 oignon",
-        "2 gousses d'ail",
-        "1 morceau de gingembre",
-        "1 c. à s. de pâte de curry (sans alcool / halal) ou curry en poudre + curcuma + cumin",
-        "jus de citron",
-        "coriandre",
-        "2 c. à s. d'huile"
+        "4 steaks de bœuf (~150 g pièce, halal)",
+        "1 kg de pommes de terre à chair ferme",
+        "1 sachet de salade verte (ou 1 batavia)",
+        "4 c. à s. d'huile d'olive",
+        "paprika fumé, ail en poudre, sel, poivre",
+        "Vinaigrette : huile d'olive + jus de citron + moutarde"
       ],
       "etapes": [
-        "Fais revenir oignon + ail + gingembre 4 min, ajoute la pâte de curry (ou épices).",
-        "Verse lait de coco + tomates, frémis 5 min.",
-        "Ajoute le cabillaud, laisse pocher 8-10 min sans trop remuer.",
-        "Incorpore les épinards 2 min. Finis au citron + coriandre.",
-        "Sers sur le riz complet."
+        "Potatoes : coupe les pommes de terre en quartiers, enrobe d'huile + paprika + ail + sel. Four 200 °C, 30 min (retourne à mi-cuisson).",
+        "Steaks : saisis 2-3 min par face (selon cuisson souhaitée), sale après cuisson, laisse reposer 3 min.",
+        "Assaisonne la salade avec la vinaigrette citron-moutarde.",
+        "Sers steak + potatoes + salade."
       ],
       "macros": {
         "kcal": 560,
         "P": 42,
-        "G": 50,
+        "G": 42,
+        "L": 22
+      },
+      "substitution_halal": "Steaks de bœuf halal.",
+      "astuce_batch": "Pour 4 portions. Réchauffe les potatoes au four/airfryer (elles restent croustillantes). Le steak, réchauffe-le doucement ou mange-le tranché froid sur la salade."
+    },
+    {
+      "id": "r4",
+      "nom": "Poulet à la crème de champignons & riz complet",
+      "portions": 4,
+      "prep_min": 15,
+      "cuisson_min": 25,
+      "ingredients": [
+        "700 g de blanc de poulet (halal)",
+        "250 g de riz complet (cru)",
+        "500 g de champignons de Paris",
+        "2 oignons",
+        "2 gousses d'ail",
+        "200 ml de crème légère (15 %)",
+        "150 ml de bouillon de volaille",
+        "2 c. à s. d'huile d'olive",
+        "persil, thym, sel, poivre"
+      ],
+      "etapes": [
+        "Cuis le riz complet selon le paquet (~18-20 min).",
+        "Émince le poulet, saisis-le 6-7 min, réserve.",
+        "Fais suer oignon + ail, ajoute les champignons émincés, cuis 6-8 min.",
+        "Déglace au bouillon, ajoute la crème, remets le poulet, mijote 5 min. Persil, thym.",
+        "Sers sur le riz complet."
+      ],
+      "macros": {
+        "kcal": 590,
+        "P": 52,
+        "G": 48,
         "L": 16
       },
-      "substitution_halal": "Pâte de curry sans alcool (vérifie l'étiquette).",
-      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi. Réchauffe en douceur pour garder le poisson moelleux."
+      "substitution_halal": "Poulet halal ; aucun vin blanc — déglaçage au bouillon + crème suffisent.",
+      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi. Réchauffe en douceur."
+    },
+    {
+      "id": "r5",
+      "nom": "Tajine de poulet citron-olives & semoule complète",
+      "portions": 4,
+      "prep_min": 15,
+      "cuisson_min": 35,
+      "ingredients": [
+        "800 g de hauts de cuisse de poulet désossés (halal)",
+        "250 g de semoule complète (couscous complet, cru)",
+        "2 oignons",
+        "3 gousses d'ail",
+        "1 citron confit (ou 1 citron frais + son zeste)",
+        "150 g d'olives vertes dénoyautées",
+        "1 morceau de gingembre",
+        "1 botte de coriandre",
+        "300 ml de bouillon de volaille",
+        "2 c. à s. d'huile d'olive",
+        "curcuma, cumin, gingembre moulu, paprika, sel, poivre"
+      ],
+      "etapes": [
+        "Fais revenir oignon émincé + ail 5 min, ajoute les épices et le gingembre râpé.",
+        "Ajoute le poulet, colore 5 min sur toutes les faces.",
+        "Verse le bouillon, ajoute le citron confit en quartiers, couvre et mijote 25 min à feu doux.",
+        "Ajoute les olives et la coriandre ciselée, poursuis 5 min.",
+        "Couvre la semoule d'eau bouillante salée + filet d'huile, laisse gonfler 5 min, égrène à la fourchette.",
+        "Sers le tajine sur la semoule."
+      ],
+      "macros": {
+        "kcal": 600,
+        "P": 50,
+        "G": 50,
+        "L": 18
+      },
+      "substitution_halal": "Poulet halal ; aucun alcool dans la cuisson, le bouillon + citron confit suffisent à parfumer.",
+      "astuce_batch": "Pour 4 portions. Encore meilleur réchauffé (les saveurs infusent) — idéal pour le lendemain midi."
     },
     {
       "id": "pd1",
@@ -496,82 +449,63 @@
   ],
   "courses": {
     "boucherie": [
-      "700 g de hauts de cuisse de poulet désossés (halal)",
-      "600 g de blanc de poulet (halal)",
-      "700 g de bœuf haché 5 % (halal)",
-      "700 g d'agneau haché (halal) — ou 350 g agneau + 350 g bœuf 5 %"
+      "700 g de blanc de poulet halal",
+      "800 g de hauts de cuisse de poulet désossés halal (pour le tajine)",
+      "600 g de bœuf haché 5 % halal",
+      "4 steaks de bœuf halal (~150 g pièce)"
     ],
     "poisson": [
-      "4 pavés de saumon (~150 g pièce)",
-      "700 g de dos de cabillaud (frais ou surgelé)"
+      "4 dos de cabillaud (~170 g pièce)"
     ],
     "fruits_legumes": [
-      "10 oignons jaunes",
-      "1 botte d'oignons nouveaux",
-      "2 têtes d'ail",
-      "1 gros morceau de gingembre frais",
-      "3 carottes",
-      "4 poivrons rouges",
-      "2 courgettes",
-      "2 brocolis (~800 g)",
-      "1 grand sachet d'épinards frais (~300 g)",
-      "7 citrons",
-      "4 avocats (à maturité)",
+      "1 kg de patate douce",
+      "1 kg de pommes de terre à chair ferme",
+      "400 g d'épinards frais",
+      "500 g de champignons de Paris",
+      "6 oignons",
+      "1 tête d'ail",
+      "1 morceau de gingembre frais",
+      "1 sachet de salade verte (ou 1 batavia)",
+      "3 citrons",
       "1 botte de persil",
       "1 botte de coriandre",
-      "quelques tomates cerises (pour l'omelette du petit-déj)",
-      "6 bananes",
-      "2 barquettes de myrtilles / fruits rouges",
-      "6 pommes ou poires"
+      "Bananes (pour les petits-déj)"
     ],
     "laitiers_oeufs": [
-      "24 à 30 œufs (2-3 boîtes)",
-      "3 à 4 pots de skyr / fromage blanc 0 % (~1,5 kg au total)",
-      "1 L de lait (ou boisson végétale)"
+      "1 L de lait",
+      "200 ml de crème légère 15 %",
+      "60 g de beurre (vérifier le placard)",
+      "120 g de mozzarella râpée (ou emmental)",
+      "1 Saint Môret"
     ],
     "feculents_pain": [
-      "1 kg de riz complet (yassa, chili, saumon, curry)",
-      "1 paquet de boulgour (500 g)",
-      "1 grand paquet de nouilles (de riz ou complètes)",
-      "1 paquet de flocons d'avoine (500 g)",
-      "1 pain complet",
-      "1 paquet de galettes de riz"
+      "250 g de riz complet",
+      "250 g de semoule complète (couscous complet)",
+      "1 paquet de feuilles de lasagne (12 feuilles)"
     ],
     "epicerie_salee": [
       "3 boîtes de tomates concassées (400 g)",
-      "1 boîte de haricots rouges",
-      "1 boîte de lait de coco (400 ml)",
-      "1 pot de pâte de curry (sans alcool / halal) OU curry en poudre",
-      "1 tube/boîte de concentré de tomate",
-      "1 pot de moutarde (SANS VIN — vérifier l'étiquette)",
-      "1 pot de beurre de cacahuète (sans sucre ajouté de préférence)",
-      "1 pot de miel",
-      "1 sachet d'amandes (et/ou noix)",
-      "1 paquet de chapelure (ou utiliser des flocons d'avoine mixés)"
+      "1 tube de concentré de tomate",
+      "1 pot d'olives vertes dénoyautées (150 g)",
+      "1 pot de citron confit (ou à défaut, citron frais)",
+      "1 cube de bouillon de volaille",
+      "60 g de farine (vérifier le placard)"
     ],
     "epices_condiments": [
       "Huile d'olive (vérifier le placard)",
-      "Huile de sésame (vérifier le placard)",
-      "Sauce soja SANS ALCOOL / halal",
-      "Bouillon de volaille sans alcool (vérifier le placard)",
-      "Cumin, paprika (doux + fumé), curcuma, coriandre moulue, cannelle, gingembre moulu, origan, piment doux",
-      "Laurier (vérifier le placard)",
-      "Sel, poivre (vérifier le placard)",
-      "Graines de sésame (vérifier le placard)",
-      "Vinaigre d'alcool, en dépannage acidité (le jus de citron est déjà prévu)"
+      "Paprika / paprika fumé",
+      "Ail en poudre",
+      "Cumin, curcuma, gingembre moulu",
+      "Origan, basilic, thym",
+      "Noix de muscade",
+      "Moutarde",
+      "Jus de citron ou vinaigre d'alcool"
     ],
-    "surgeles": [
-      "1 sachet d'épinards surgelés (alternative aux frais)",
-      "Cabillaud / saumon surgelé (si non frais)",
-      "1 sachet de fruits rouges surgelés (pour petits-déj / collations)"
-    ],
+    "surgeles": [],
     "maison_hygiene": [
-      "1 gel douche",
-      "1 shampoing",
-      "1 adoucissant linge",
-      "1 paquet de tablettes lave-vaisselle",
-      "2 packs d'eau",
-      "1 petit paquet de papier toilette"
+      "Sacs poubelle",
+      "1 recharge de savon pour les mains",
+      "2 packs d'eau"
     ]
   }
 }
