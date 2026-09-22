@@ -1,354 +1,361 @@
 {
   "version": 1,
-  "label_semaine": "Semaine du 15 juin 2026",
+  "label_semaine": "Semaine du 20 septembre 2026",
   "personnes": 2,
   "batch_cooking": true,
   "petit_dej_collations_inclus": true,
-  "equilibre_semaine": "Sources de protéines variées sur la semaine : cabillaud, bœuf (lasagnes + steak), poulet (champignons + tajine). Féculents complets (riz, semoule, patate douce, pommes de terre) et légumes à chaque assiette. Chaque midi = le dîner de la veille (restes emportés au travail).",
+  "equilibre_semaine": "6 protéines différentes (poulet ×2, bœuf, saumon, dinde, cabillaud), 5 féculents différents, des légumes à chaque repas. Léger déficit, protéines dans la cible (~180-187 g/j pour Jérôme). Chaque midi = le dîner de la veille (restes). Portions égales : pour des besoins plus faibles, réduis le féculent et saute la collation B.",
   "citations": [
     {
-      "texte": "Cap de la semaine : protéines à chaque repas, féculents complets autour de l'entraînement, légumes en volume, bons gras maîtrisés.",
+      "texte": "6 protéines différentes, 5 féculents différents, des légumes à chaque repas. Pense à boire 2,5-3 L d'eau par jour, plus les jours d'entraînement.",
       "source": "Coach Nutrition"
     }
   ],
   "jours": [
     {
       "jour": "dimanche",
-      "date_affichee": "14 juin",
-      "petit_dejeuner": "pd1",
-      "collations": [
-        "c1"
-      ],
-      "dejeuner": null,
-      "diner": null
-    },
-    {
-      "jour": "lundi",
-      "date_affichee": "15 juin",
-      "petit_dejeuner": "pd2",
-      "collations": [
-        "c2"
-      ],
+      "date_affichee": "20 septembre",
+      "petit_dejeuner": null,
+      "collations": [],
       "dejeuner": null,
       "diner": "r1"
     },
     {
-      "jour": "mardi",
-      "date_affichee": "16 juin",
-      "petit_dejeuner": "pd3",
+      "jour": "lundi",
+      "date_affichee": "21 septembre",
+      "petit_dejeuner": "pd1",
       "collations": [
-        "c3"
+        "c1",
+        "c2"
       ],
       "dejeuner": "r1",
       "diner": "r2"
     },
     {
-      "jour": "mercredi",
-      "date_affichee": "17 juin",
-      "petit_dejeuner": "pd1",
+      "jour": "mardi",
+      "date_affichee": "22 septembre",
+      "petit_dejeuner": "pd2",
       "collations": [
-        "c4"
+        "c1",
+        "c2"
       ],
       "dejeuner": "r2",
       "diner": "r3"
     },
     {
-      "jour": "jeudi",
-      "date_affichee": "18 juin",
-      "petit_dejeuner": "pd2",
+      "jour": "mercredi",
+      "date_affichee": "23 septembre",
+      "petit_dejeuner": "pd1",
       "collations": [
-        "c5"
+        "c1",
+        "c2"
       ],
       "dejeuner": "r3",
       "diner": "r4"
     },
     {
-      "jour": "vendredi",
-      "date_affichee": "19 juin",
-      "petit_dejeuner": "pd3",
+      "jour": "jeudi",
+      "date_affichee": "24 septembre",
+      "petit_dejeuner": "pd2",
       "collations": [
-        "c1"
+        "c1",
+        "c2"
       ],
       "dejeuner": "r4",
       "diner": "r5"
     },
     {
-      "jour": "samedi",
-      "date_affichee": "20 juin",
+      "jour": "vendredi",
+      "date_affichee": "25 septembre",
       "petit_dejeuner": "pd1",
       "collations": [
+        "c1",
         "c2"
       ],
       "dejeuner": "r5",
+      "diner": "r6"
+    },
+    {
+      "jour": "samedi",
+      "date_affichee": "26 septembre",
+      "petit_dejeuner": "pd2",
+      "collations": [
+        "c1",
+        "c2"
+      ],
+      "dejeuner": "r6",
       "diner": null
     }
   ],
   "recettes": [
     {
       "id": "r1",
-      "nom": "Cabillaud poêlé, écrasé de patate douce & épinards",
+      "nom": "Poulet & légumes rôtis en plaque, sauce fromage blanc ail-ciboulette",
+      "portions": 4,
+      "prep_min": 15,
+      "cuisson_min": 35,
+      "ingredients": [
+        "800 g de blanc de poulet",
+        "1,2 kg de pommes de terre grenaille",
+        "3 poivrons (couleurs variées)",
+        "2 courgettes",
+        "2 oignons rouges",
+        "4 gousses d'ail",
+        "3 c. à s. d'huile d'olive",
+        "2 c. à c. de paprika fumé",
+        "2 c. à c. d'herbes de Provence, sel, poivre",
+        "Sauce : 400 g de fromage blanc 0 %, ½ botte de ciboulette, ½ citron"
+      ],
+      "etapes": [
+        "Préchauffe le four à 210 °C. Coupe les pommes de terre en deux, les poivrons en lanières, les courgettes en grosses rondelles et les oignons en quartiers.",
+        "Étale les pommes de terre sur une plaque avec 2 c. à s. d'huile, 1 c. à c. de paprika et du sel. Enfourne 15 min.",
+        "Coupe le poulet en gros cubes et mélange-le avec 1 c. à s. d'huile, le reste du paprika, les herbes, 3 gousses d'ail écrasées, sel et poivre.",
+        "Ajoute le poulet et les légumes sur la plaque (2 plaques si ça déborde, sinon ça cuit à la vapeur). Enfourne 20 min.",
+        "Sauce : fromage blanc + 1 gousse d'ail râpée + ciboulette ciselée + jus de ½ citron, sel, poivre."
+      ],
+      "macros": {
+        "kcal": 650,
+        "P": 60,
+        "G": 68,
+        "L": 13
+      },
+      "substitution_halal": "",
+      "astuce_batch": "Astuce boîte du lendemain : sauce dans un petit pot à part, à ajouter après réchauffage.",
+      "prep_dimanche": "Méthode de la semaine : chaque dîner est cuisiné en 4 portions ; garde 2 portions pour le déjeuner du lendemain (frigo sous 2h, à consommer sous 24h)."
+    },
+    {
+      "id": "r2",
+      "nom": "Bolognaise express de bœuf, pâtes complètes",
+      "portions": 4,
+      "prep_min": 10,
+      "cuisson_min": 30,
+      "ingredients": [
+        "600 g de bœuf haché 5 %",
+        "500 g de pâtes complètes",
+        "2 boîtes de tomates concassées (2 × 400 g)",
+        "1 c. à s. de concentré de tomate",
+        "2 carottes",
+        "1 courgette",
+        "1 oignon",
+        "2 gousses d'ail",
+        "1 c. à s. d'huile d'olive",
+        "1 c. à c. d'origan, sel, poivre"
+      ],
+      "etapes": [
+        "Hache l'oignon et l'ail. Râpe les carottes et la courgette (elles fondent dans la sauce).",
+        "Fais revenir oignon, carottes et courgette 5 min dans l'huile, puis ajoute l'ail et le bœuf. Colore 5 min.",
+        "Ajoute tomates, concentré, origan, sel, poivre. Laisse mijoter 20 min à feu doux.",
+        "Pendant ce temps, cuis les pâtes. Pour les boîtes, mélange directement pâtes et sauce."
+      ],
+      "macros": {
+        "kcal": 730,
+        "P": 51,
+        "G": 96,
+        "L": 14
+      },
+      "substitution_halal": "Pas de parmesan (souvent à présure animale), la sauce se suffit à elle-même.",
+      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi."
+    },
+    {
+      "id": "r3",
+      "nom": "Saumon au four, quinoa & haricots verts, sauce citron-aneth",
       "portions": 4,
       "prep_min": 10,
       "cuisson_min": 20,
       "ingredients": [
-        "4 dos de cabillaud (~170 g pièce)",
-        "1 kg de patate douce",
-        "400 g d'épinards frais",
-        "4 gousses d'ail",
-        "1 citron",
-        "4 c. à s. d'huile d'olive",
-        "paprika, sel, poivre"
+        "4 pavés de saumon (~150 g pièce)",
+        "320 g de quinoa",
+        "1 kg de haricots verts surgelés",
+        "1,5 citron",
+        "Sauce : 300 g de fromage blanc 0 %, 1 botte d'aneth",
+        "sel, poivre"
       ],
       "etapes": [
-        "Cuis la patate douce en cubes (eau ou vapeur) 15 min, écrase avec 2 c. à s. d'huile et du sel.",
-        "Poêle le cabillaud 3-4 min par face, paprika et sel.",
-        "Fais tomber les épinards 3-4 min avec l'ail émincé.",
-        "Sers le poisson sur l'écrasé + épinards, trait de citron."
+        "Préchauffe le four à 200 °C. Rince le quinoa et cuis-le 12-15 min dans 2 fois son volume d'eau salée.",
+        "Dépose le saumon sur une plaque, sale, poivre, ajoute le zeste d'un citron et quelques rondelles. Enfourne 12-15 min.",
+        "Cuis les haricots verts 8-10 min à l'eau bouillante salée.",
+        "Sauce : fromage blanc + jus de ½ citron + aneth ciselé + sel, poivre."
       ],
       "macros": {
-        "kcal": 480,
-        "P": 42,
-        "G": 45,
-        "L": 14
-      },
-      "substitution_halal": "",
-      "astuce_batch": "Recette en 4 portions : garde 2 portions au frigo (sous 2h) pour le déjeuner du lendemain. Réchauffe en douceur pour garder le poisson moelleux."
-    },
-    {
-      "id": "r2",
-      "nom": "Lasagnes bœuf & béchamel maison",
-      "portions": 4,
-      "prep_min": 25,
-      "cuisson_min": 35,
-      "ingredients": [
-        "600 g de bœuf haché 5 %",
-        "12 feuilles de lasagne",
-        "2 boîtes de tomates concassées (800 g)",
-        "2 oignons",
-        "3 gousses d'ail",
-        "80 g de concentré de tomate",
-        "1 L de lait",
-        "60 g de farine",
-        "60 g de beurre",
-        "noix de muscade",
-        "120 g de mozzarella râpée (ou emmental)",
-        "3 c. à s. d'huile d'olive",
-        "origan, basilic, sel, poivre"
-      ],
-      "etapes": [
-        "Sauce bolognaise : fais revenir oignon + ail, ajoute le bœuf, colore. Ajoute tomates + concentré + herbes, mijote 15-20 min.",
-        "Béchamel : fais fondre le beurre, ajoute la farine (roux), verse le lait peu à peu en fouettant 5 min jusqu'à épaississement, muscade, sel.",
-        "Monte les couches : bolognaise → lasagne → béchamel, répète. Termine par béchamel + mozzarella.",
-        "Four 200 °C, 30-35 min jusqu'à gratiné."
-      ],
-      "macros": {
-        "kcal": 620,
-        "P": 45,
-        "G": 52,
+        "kcal": 690,
+        "P": 51,
+        "G": 63,
         "L": 24
       },
-      "substitution_halal": "Bœuf haché halal ; aucun vin dans la bolognaise (le mijotage tomate suffit). Pour le fromage, vérifie une présure végétale si besoin.",
-      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi. Les lasagnes se réchauffent très bien au four."
-    },
-    {
-      "id": "r3",
-      "nom": "Steak & potatoes maison, salade verte",
-      "portions": 4,
-      "prep_min": 15,
-      "cuisson_min": 30,
-      "ingredients": [
-        "4 steaks de bœuf (~150 g pièce, halal)",
-        "1 kg de pommes de terre à chair ferme",
-        "1 sachet de salade verte (ou 1 batavia)",
-        "4 c. à s. d'huile d'olive",
-        "paprika fumé, ail en poudre, sel, poivre",
-        "Vinaigrette : huile d'olive + jus de citron + moutarde"
-      ],
-      "etapes": [
-        "Potatoes : coupe les pommes de terre en quartiers, enrobe d'huile + paprika + ail + sel. Four 200 °C, 30 min (retourne à mi-cuisson).",
-        "Steaks : saisis 2-3 min par face (selon cuisson souhaitée), sale après cuisson, laisse reposer 3 min.",
-        "Assaisonne la salade avec la vinaigrette citron-moutarde.",
-        "Sers steak + potatoes + salade."
-      ],
-      "macros": {
-        "kcal": 560,
-        "P": 42,
-        "G": 42,
-        "L": 22
-      },
-      "substitution_halal": "Steaks de bœuf halal.",
-      "astuce_batch": "Pour 4 portions. Réchauffe les potatoes au four/airfryer (elles restent croustillantes). Le steak, réchauffe-le doucement ou mange-le tranché froid sur la salade."
+      "substitution_halal": "",
+      "astuce_batch": "Astuce boîte du lendemain : à manger froid en bowl (saumon émietté sur quinoa + haricots, sauce à part). Pas de micro-ondes, pas d'odeur de poisson."
     },
     {
       "id": "r4",
-      "nom": "Poulet à la crème de champignons & riz complet",
+      "nom": "Chili de dinde aux haricots rouges, riz complet",
+      "portions": 4,
+      "prep_min": 10,
+      "cuisson_min": 30,
+      "ingredients": [
+        "700 g de dinde hachée",
+        "300 g de riz basmati complet",
+        "2 boîtes de haricots rouges (2 × 400 g)",
+        "1 petite boîte de maïs (~140 g égoutté)",
+        "2 boîtes de tomates concassées (2 × 400 g)",
+        "1 c. à s. de concentré de tomate",
+        "2 poivrons",
+        "2 oignons",
+        "2 gousses d'ail",
+        "1 c. à s. d'huile d'olive",
+        "2 c. à c. de cumin, 2 c. à c. de paprika, ½-1 c. à c. de piment, 1 c. à c. d'origan, sel"
+      ],
+      "etapes": [
+        "Lance la cuisson du riz selon le paquet (~25 min pour du complet).",
+        "Fais revenir oignons et poivrons émincés 5 min dans l'huile, ajoute l'ail et la dinde, colore 5 min.",
+        "Ajoute les épices, mélange 1 min.",
+        "Ajoute tomates, concentré, haricots rouges rincés et maïs. Mijote 15-20 min.",
+        "Option : 1 c. à s. de fromage blanc sur le dessus au service."
+      ],
+      "macros": {
+        "kcal": 750,
+        "P": 55,
+        "G": 94,
+        "L": 15
+      },
+      "substitution_halal": "",
+      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi."
+    },
+    {
+      "id": "r5",
+      "nom": "Cabillaud poêlé, écrasé de patate douce & épinards",
       "portions": 4,
       "prep_min": 15,
       "cuisson_min": 25,
       "ingredients": [
-        "700 g de blanc de poulet (halal)",
-        "250 g de riz complet (cru)",
-        "500 g de champignons de Paris",
-        "2 oignons",
+        "4 dos de cabillaud (~180 g pièce)",
+        "1,5 kg de patates douces",
+        "600 g d'épinards en branches surgelés",
+        "200 g de fromage blanc 0 %",
         "2 gousses d'ail",
-        "200 ml de crème légère (15 %)",
-        "150 ml de bouillon de volaille",
-        "2 c. à s. d'huile d'olive",
-        "persil, thym, sel, poivre"
+        "3 c. à s. d'huile d'olive",
+        "1 citron, paprika, sel, poivre"
       ],
       "etapes": [
-        "Cuis le riz complet selon le paquet (~18-20 min).",
-        "Émince le poulet, saisis-le 6-7 min, réserve.",
-        "Fais suer oignon + ail, ajoute les champignons émincés, cuis 6-8 min.",
-        "Déglace au bouillon, ajoute la crème, remets le poulet, mijote 5 min. Persil, thym.",
-        "Sers sur le riz complet."
+        "Épluche les patates douces, coupe-les en cubes et cuis-les 15-18 min à l'eau bouillante salée.",
+        "Poêle les épinards avec 1 c. à s. d'huile et l'ail haché ~8 min, jusqu'à ce que l'eau s'évapore.",
+        "Égoutte les patates douces, écrase-les avec le fromage blanc, sel, poivre, puis incorpore les épinards.",
+        "Sèche le cabillaud, sale, poivre, une pincée de paprika. Poêle-le dans 2 c. à s. d'huile bien chaude, 3-4 min par face. Arrose de citron."
       ],
       "macros": {
-        "kcal": 590,
-        "P": 52,
-        "G": 48,
-        "L": 16
+        "kcal": 615,
+        "P": 47,
+        "G": 81,
+        "L": 11
       },
-      "substitution_halal": "Poulet halal ; aucun vin blanc — déglaçage au bouillon + crème suffisent.",
-      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi. Réchauffe en douceur."
+      "substitution_halal": "",
+      "astuce_batch": "Si le cabillaud est surgelé, sors-le au frigo la veille. Journée un peu plus légère : ne saute pas les collations."
     },
     {
-      "id": "r5",
-      "nom": "Tajine de poulet citron-olives & semoule complète",
+      "id": "r6",
+      "nom": "Curry de poulet léger, pois chiches & chou-fleur, riz complet",
       "portions": 4,
       "prep_min": 15,
-      "cuisson_min": 35,
+      "cuisson_min": 25,
       "ingredients": [
-        "800 g de hauts de cuisse de poulet désossés (halal)",
-        "250 g de semoule complète (couscous complet, cru)",
+        "800 g de blanc de poulet",
+        "280 g de riz basmati complet",
+        "1 boîte de pois chiches (400 g)",
+        "1 petit chou-fleur (~600 g)",
+        "1 boîte de tomates concassées (400 g)",
+        "40 cl de lait de coco allégé",
         "2 oignons",
         "3 gousses d'ail",
-        "1 citron confit (ou 1 citron frais + son zeste)",
-        "150 g d'olives vertes dénoyautées",
-        "1 morceau de gingembre",
-        "1 botte de coriandre",
-        "300 ml de bouillon de volaille",
-        "2 c. à s. d'huile d'olive",
-        "curcuma, cumin, gingembre moulu, paprika, sel, poivre"
+        "1 morceau de gingembre frais (~3 cm)",
+        "1 c. à s. d'huile d'olive",
+        "2 c. à s. de curry en poudre, 1 c. à c. de curcuma, sel",
+        "½ botte de coriandre (facultatif)"
       ],
       "etapes": [
-        "Fais revenir oignon émincé + ail 5 min, ajoute les épices et le gingembre râpé.",
-        "Ajoute le poulet, colore 5 min sur toutes les faces.",
-        "Verse le bouillon, ajoute le citron confit en quartiers, couvre et mijote 25 min à feu doux.",
-        "Ajoute les olives et la coriandre ciselée, poursuis 5 min.",
-        "Couvre la semoule d'eau bouillante salée + filet d'huile, laisse gonfler 5 min, égrène à la fourchette.",
-        "Sers le tajine sur la semoule."
+        "Lance la cuisson du riz.",
+        "Fais revenir les oignons émincés 5 min dans l'huile. Ajoute ail et gingembre râpés, curry et curcuma, 1 min.",
+        "Ajoute le poulet en cubes, fais-le dorer 5 min.",
+        "Ajoute le chou-fleur en petits bouquets, les tomates, le lait de coco et les pois chiches rincés. Couvre et laisse mijoter 15 min.",
+        "Parsème de coriandre."
       ],
       "macros": {
-        "kcal": 600,
-        "P": 50,
-        "G": 50,
-        "L": 18
+        "kcal": 730,
+        "P": 61,
+        "G": 78,
+        "L": 17
       },
-      "substitution_halal": "Poulet halal ; aucun alcool dans la cuisson, le bouillon + citron confit suffisent à parfumer.",
-      "astuce_batch": "Pour 4 portions. Encore meilleur réchauffé (les saveurs infusent) — idéal pour le lendemain midi."
+      "substitution_halal": "Curry en poudre plutôt qu'une pâte de curry industrielle (certaines contiennent des additifs douteux).",
+      "astuce_batch": "Pour 4 portions : 2 le soir + 2 le lendemain midi."
     },
     {
       "id": "pd1",
-      "nom": "Overnight oats protéinés",
+      "nom": "Porridge protéiné",
       "portions": 1,
       "prep_min": 5,
-      "cuisson_min": 0,
+      "cuisson_min": 3,
       "ingredients": [
-        "60 g de flocons d'avoine",
-        "150 g de skyr nature",
-        "150 ml de lait (ou boisson végétale)",
+        "80 g de flocons d'avoine",
+        "250 ml de lait demi-écrémé",
+        "150 g de fromage blanc 0 %",
         "1 banane",
-        "1 c. à s. de beurre de cacahuète",
-        "1 poignée de myrtilles",
-        "1 pincée de cannelle"
+        "15 g de purée de cacahuète"
       ],
       "etapes": [
-        "Mélange flocons + skyr + lait dans un bocal, ajoute la cannelle.",
-        "Place au frigo une nuit.",
-        "Au matin : ajoute banane, beurre de cacahuète et myrtilles."
+        "Cuis l'avoine + lait 3 min au micro-ondes ou à la casserole.",
+        "Hors du feu : ajoute le fromage blanc, la banane en rondelles et la purée de cacahuète."
       ],
       "macros": {
-        "kcal": 520,
+        "kcal": 670,
         "P": 35,
-        "G": 65,
-        "L": 15
+        "G": 91,
+        "L": 18
       },
       "substitution_halal": "",
-      "astuce_batch": "À préparer la veille : 0 effort le matin. Double les quantités si vous êtes deux."
+      "astuce_batch": ""
     },
     {
       "id": "pd2",
-      "nom": "Omelette complète & avocat",
+      "nom": "Œufs brouillés & tartines",
       "portions": 1,
       "prep_min": 5,
       "cuisson_min": 5,
       "ingredients": [
         "3 œufs",
-        "1 tranche de pain complet",
-        "1/2 avocat",
-        "quelques tomates cerises",
-        "herbes",
-        "1 c. à c. d'huile d'olive"
+        "2 tranches de pain complet",
+        "100 g de fromage blanc 0 %",
+        "1 pomme",
+        "sel, poivre"
       ],
       "etapes": [
-        "Bats les œufs, sale, poivre.",
-        "Cuis en omelette 4-5 min à feu moyen.",
-        "Sers avec pain complet, avocat tranché et tomates."
+        "Brouille les 3 œufs à la poêle antiadhésive, sel, poivre.",
+        "Sers avec 2 tranches de pain complet, le fromage blanc et la pomme."
       ],
       "macros": {
-        "kcal": 470,
-        "P": 26,
-        "G": 28,
-        "L": 28
-      },
-      "substitution_halal": "",
-      "astuce_batch": "Double les quantités si vous êtes deux à petit-déjeuner."
-    },
-    {
-      "id": "pd3",
-      "nom": "Bowl skyr-avoine express",
-      "portions": 1,
-      "prep_min": 5,
-      "cuisson_min": 0,
-      "ingredients": [
-        "200 g de skyr / fromage blanc 0 %",
-        "40 g de flocons d'avoine",
-        "1 fruit (pomme, poire ou fruits rouges)",
-        "20 g d'amandes",
-        "1 c. à c. de miel"
-      ],
-      "etapes": [
-        "Verse le skyr dans un bol, ajoute les flocons.",
-        "Garnis de fruit, amandes et d'un filet de miel."
-      ],
-      "macros": {
-        "kcal": 480,
-        "P": 38,
-        "G": 50,
-        "L": 16
+        "kcal": 535,
+        "P": 35,
+        "G": 58,
+        "L": 18
       },
       "substitution_halal": "",
       "astuce_batch": ""
     },
     {
       "id": "c1",
-      "nom": "Skyr, fruit & amandes",
+      "nom": "Bol fromage blanc, fruits rouges & amandes",
       "portions": 1,
       "prep_min": 2,
       "cuisson_min": 0,
       "ingredients": [
-        "150 g de skyr",
-        "1 fruit",
-        "1 poignée d'amandes"
+        "250 g de fromage blanc 0 %",
+        "80 g de fruits rouges surgelés",
+        "20 g d'amandes"
       ],
       "etapes": [
-        "Mélanger le skyr, ajouter le fruit et les amandes."
+        "Mélanger le fromage blanc et les fruits rouges, ajouter les amandes."
       ],
       "macros": {
-        "kcal": 250,
-        "P": 25,
-        "G": 20,
+        "kcal": 270,
+        "P": 24,
+        "G": 19,
         "L": 10
       },
       "substitution_halal": "",
@@ -356,156 +363,95 @@
     },
     {
       "id": "c2",
-      "nom": "2 œufs durs & crudités",
+      "nom": "Œufs durs, banane & amandes",
       "portions": 1,
       "prep_min": 2,
-      "cuisson_min": 9,
+      "cuisson_min": 10,
       "ingredients": [
-        "2 œufs",
-        "crudités (carotte, concombre)"
+        "2 œufs durs",
+        "1 banane",
+        "20 g d'amandes"
       ],
       "etapes": [
-        "Cuire les œufs durs 9 min.",
-        "Servir avec des crudités."
+        "Cuire les œufs durs 10 min.",
+        "Déguster avec la banane et les amandes."
       ],
       "macros": {
-        "kcal": 180,
-        "P": 14,
-        "G": 6,
-        "L": 12
+        "kcal": 360,
+        "P": 17,
+        "G": 25,
+        "L": 20
       },
       "substitution_halal": "",
-      "astuce_batch": ""
-    },
-    {
-      "id": "c3",
-      "nom": "Fromage blanc 0 %, miel & cannelle",
-      "portions": 1,
-      "prep_min": 2,
-      "cuisson_min": 0,
-      "ingredients": [
-        "200 g de fromage blanc 0 %",
-        "1 c. à c. de miel",
-        "cannelle"
-      ],
-      "etapes": [
-        "Mélanger fromage blanc, miel et cannelle."
-      ],
-      "macros": {
-        "kcal": 180,
-        "P": 20,
-        "G": 18,
-        "L": 1
-      },
-      "substitution_halal": "",
-      "astuce_batch": ""
-    },
-    {
-      "id": "c4",
-      "nom": "Galette de riz, beurre de cacahuète & banane",
-      "portions": 1,
-      "prep_min": 2,
-      "cuisson_min": 0,
-      "ingredients": [
-        "1 galette de riz",
-        "1 c. à s. de beurre de cacahuète",
-        "1/2 banane"
-      ],
-      "etapes": [
-        "Tartiner la galette de beurre de cacahuète.",
-        "Ajouter la banane tranchée."
-      ],
-      "macros": {
-        "kcal": 220,
-        "P": 7,
-        "G": 28,
-        "L": 9
-      },
-      "substitution_halal": "",
-      "astuce_batch": ""
-    },
-    {
-      "id": "c5",
-      "nom": "Amandes / noix & fruit",
-      "portions": 1,
-      "prep_min": 1,
-      "cuisson_min": 0,
-      "ingredients": [
-        "1 poignée d'amandes / noix",
-        "1 fruit"
-      ],
-      "etapes": [
-        "Déguster."
-      ],
-      "macros": {
-        "kcal": 250,
-        "P": 7,
-        "G": 22,
-        "L": 16
-      },
-      "substitution_halal": "",
-      "astuce_batch": ""
+      "astuce_batch": "Cuis 6 œufs durs d'un coup (10 min) le lundi et le jeudi : ils se gardent 4-5 jours au frigo avec la coquille."
     }
   ],
   "courses": {
     "boucherie": [
-      "700 g de blanc de poulet halal",
-      "800 g de hauts de cuisse de poulet désossés halal (pour le tajine)",
-      "600 g de bœuf haché 5 % halal",
-      "4 steaks de bœuf halal (~150 g pièce)"
+      "1,6 kg de blanc de poulet (800 g dimanche + 800 g vendredi)",
+      "600 g de bœuf haché 5 %",
+      "700 g de dinde hachée"
     ],
     "poisson": [
-      "4 dos de cabillaud (~170 g pièce)"
+      "4 pavés de saumon (~150 g pièce) — frais DLC ≥ mardi, sinon surgelés",
+      "4 dos de cabillaud (~180 g pièce) — surgelés conseillés (cuisinés jeudi)"
     ],
     "fruits_legumes": [
-      "1 kg de patate douce",
-      "1 kg de pommes de terre à chair ferme",
-      "400 g d'épinards frais",
-      "500 g de champignons de Paris",
-      "6 oignons",
-      "1 tête d'ail",
+      "1,5 kg de pommes de terre grenaille (1 filet)",
+      "1,5 kg de patates douces",
+      "5 poivrons",
+      "3 courgettes",
+      "2 oignons rouges",
+      "5 oignons jaunes",
+      "2 carottes",
+      "1 chou-fleur",
+      "2 têtes d'ail",
       "1 morceau de gingembre frais",
-      "1 sachet de salade verte (ou 1 batavia)",
       "3 citrons",
-      "1 botte de persil",
-      "1 botte de coriandre",
-      "Bananes (pour les petits-déj)"
+      "1 botte de ciboulette",
+      "1 botte d'aneth",
+      "1 botte de coriandre (facultatif)",
+      "12 bananes (une main bien jaune + une plus verte)",
+      "6 pommes"
     ],
     "laitiers_oeufs": [
-      "1 L de lait",
-      "200 ml de crème légère 15 %",
-      "60 g de beurre (vérifier le placard)",
-      "120 g de mozzarella râpée (ou emmental)",
-      "1 Saint Môret"
+      "~5,5 kg de fromage blanc 0 % (5 à 6 pots d'1 kg — déduire le stock)",
+      "2 L de lait demi-écrémé",
+      "30 œufs"
     ],
     "feculents_pain": [
-      "250 g de riz complet",
-      "250 g de semoule complète (couscous complet)",
-      "1 paquet de feuilles de lasagne (12 feuilles)"
+      "500 g de pâtes complètes",
+      "1 kg de riz basmati complet",
+      "500 g de quinoa",
+      "500 g de flocons d'avoine",
+      "1 pain de mie complet tranché (~500 g)"
     ],
     "epicerie_salee": [
-      "3 boîtes de tomates concassées (400 g)",
+      "5 boîtes de tomates concassées (400 g)",
       "1 tube de concentré de tomate",
-      "1 pot d'olives vertes dénoyautées (150 g)",
-      "1 pot de citron confit (ou à défaut, citron frais)",
-      "1 cube de bouillon de volaille",
-      "60 g de farine (vérifier le placard)"
+      "2 boîtes de haricots rouges (400 g)",
+      "1 boîte de pois chiches (400 g)",
+      "1 petite boîte de maïs",
+      "1 brique de lait de coco allégé (40 cl)",
+      "400 g d'amandes nature",
+      "1 pot de purée de cacahuète (sans sucre ajouté)"
     ],
     "epices_condiments": [
       "Huile d'olive (vérifier le placard)",
-      "Paprika / paprika fumé",
-      "Ail en poudre",
-      "Cumin, curcuma, gingembre moulu",
-      "Origan, basilic, thym",
-      "Noix de muscade",
-      "Moutarde",
-      "Jus de citron ou vinaigre d'alcool"
+      "Paprika fumé (vérifier le placard)",
+      "Herbes de Provence (vérifier le placard)",
+      "Origan (vérifier le placard)",
+      "Cumin (vérifier le placard)",
+      "Piment en poudre (vérifier le placard)",
+      "Curry en poudre (vérifier le placard)",
+      "Curcuma (vérifier le placard)",
+      "Sel, poivre (vérifier le placard)"
     ],
-    "surgeles": [],
-    "maison_hygiene": [
-      "Sacs poubelle",
-      "1 recharge de savon pour les mains",
-      "2 packs d'eau"
-    ]
+    "surgeles": [
+      "1 kg de haricots verts",
+      "750 g d'épinards en branches (1 sachet)",
+      "1 kg de fruits rouges"
+    ],
+    "maison_hygiene": []
   }
 }
